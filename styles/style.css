@@ -6,11 +6,10 @@
     --fonte_titulo: 'Poppins', sans-serif;
     --fonte_ttitulos: 'Great Vibes', cursive;
 
-    --cor01: #BB7805;
-    --cor02: #D1A55A;
+    --cor01: white;
+    --cor02: white;
     --cor03: #add8e6;
 }
-
 *
 {
     margin:0;
@@ -49,18 +48,23 @@ section{
     background-color: white;
 }
 .menu{
-    width: 90%;
+    width: 100%;
     background-color: var(--cor03);
     top: 0;
     display: flex;
     align-items: center;
     justify-content: space-around;
     height: 50px;
-    border-radius: 36px;
     position: fixed;
     box-shadow: 1px 2px 5px rgba(0, 0, 0, 0.4);
 }
-
+.menu > div > a{
+    margin-right: 40px;
+}
+.menu a:hover{
+    color: white;
+    transition-duration: .3s;
+}
 .items{
     margin-right: 10px;
     font-weight: 500;
@@ -70,7 +74,14 @@ section{
     font-size: 25px;
     font-weight: 600;
 }
+.input_pesquisar{
+    display: grid;
+    grid-template-columns: auto auto;
+    align-items: center;
+    justify-content: center;
+}
 .input_pesquisar input{
+    display: none;
     border-radius: 16px;
     border: none;
     outline: none;
@@ -79,12 +90,14 @@ section{
 .input_pesquisar input:focus{
     box-shadow: 0px 0px 10px #f5f5f5;
 }
-.content{
-    display: grid;
-    /* background-color: red; */
-    grid-template-columns: 700px 300px;
-    gap: 104px;
+.icon{
+    margin-right: 3px;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
+
 .objetivo_text{
     height: 500px;
     background-color: var(--cor02);
@@ -96,7 +109,7 @@ section{
     justify-content: center;
     flex-direction: column;
     padding: 8px;
-    color: #f5f5f5;
+    color: black;
     text-align: center;
 }
 .objetivo_text a {
@@ -139,11 +152,4 @@ section{
 }
 p, h1{
     text-shadow: 1px 1px 2px black;
-}
-
-@media (max-width: 1400px) {
-    .objetivo_text{
-        height: 300px;
-    }
-    
 }
