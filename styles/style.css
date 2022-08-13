@@ -15,7 +15,6 @@
     margin:0;
     padding:0;
     box-sizing: border-box;
-    font-family: var(--fonte_titulo);
 }
 a{
     color: inherit;
@@ -57,6 +56,9 @@ section{
 .menu > div > a{
     margin-right: 40px;
 }
+.menu_items{
+    font-family: var(--fonte_titulo);
+}
 .menu_items a:hover, .input_pesquisar a:hover{
     color: white;
     transition-duration: .3s;
@@ -67,6 +69,7 @@ section{
 }
 
 .logo{
+    font-family: var(--fonte_ttitulo);
     font-size: 25px;
     font-weight: 600;
 }
