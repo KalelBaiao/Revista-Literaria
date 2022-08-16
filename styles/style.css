@@ -254,6 +254,14 @@ article{
     width: 70vw;
   }
   .principal{
+    display: flex;
+    justify-content: center;
     flex-direction: column;
+    align-items: center;
+    width: 100%;
+    margin-top: 100px;
+    height: 85vh;
+    border-radius: 16px;
+    background-color: white;
 }
 }
