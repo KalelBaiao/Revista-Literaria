@@ -125,10 +125,12 @@
         }
         .container-membros{
             grid-template-columns: 350px 350px;
+            gap: 20px;
         }
 }
 @media (max-width: 800px) {
     .container-membros{
         grid-template-columns: 350px;
+        gap: 20px;
     }
 }
