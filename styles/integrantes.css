@@ -12,6 +12,8 @@
     display: grid;
     grid-template-columns: 300px 300px 300px;
     gap: 20px;
+    padding: 20% 5px;
+    height: 100vh;
 }
 .card-membro{
     background-color: white;
