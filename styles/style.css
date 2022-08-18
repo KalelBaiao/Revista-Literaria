@@ -291,4 +291,11 @@ p {
     flex-direction: column;
     height: 85%;
   }
+  .menu{
+    position: relative;
+    justify-content: space-between;
+  }
+  header{
+    padding: 0% 15%;
+  }
 }
