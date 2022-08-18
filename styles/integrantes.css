@@ -1,8 +1,8 @@
 @charset "UTF-8";
-main{
+main {
   height: auto;
 }
-.container-membros{
+.container-membros {
   display: flex;
   align-items: center;
   flex-direction: column;
@@ -58,100 +58,6 @@ main{
 }
 
 @media (max-width: 1050px) {
-  .btn-mobile {
-    position: absolute;
-    display: block;
-    z-index: 3;
-  }
-  /* .menu_items {
-          display: block;
-          position: fixed;
-          width: 100vw;
-          top: 0px;
-          left: 0px;
-          background-color: rgba(30, 31, 34, 0.9);
-          height: 0px;
-          transition: 0.7s ease-in-out;
-          text-align: center;
-          visibility: 0;
-          overflow: hidden;
-          z-index: 2;
-        }
-        .Dnav.active .menu_items {
-          visibility: 1;
-          height: 100vh;
-        } */
-  .menu_items {
-    display: block;
-    position: fixed;
-    width: 0px;
-    top: 0px;
-    right: 0px;
-    background-color: rgba(30, 31, 34, 0.9);
-    height: 100vh;
-    transition: 0.5s ease-in-out;
-    overflow-y: hidden;
-    z-index: 2;
-    text-align: center;
-    color: white;
-  }
-  .menu_items a:hover {
-    color: #87cefacc;
-    transition: 0.5s;
-  }
-  .Dnav.active .menu_items {
-    width: 100%;
-    overflow-y: auto;
-  }
-  .hed.active .btn-mobile span {
-    background-color: white;
-  }
-  .menu_items li {
-    padding-top: 30px;
-  }
-  .menu_items li:nth-child(1) {
-    padding-top: 150px;
-  }
-  .btn-mobile {
-    display: flex;
-    position: relative;
-    padding: 5px 10x;
-    font-size: 15px;
-    border: none;
-    background: none;
-    cursor: pointer;
-    height: 22px;
-    width: 30px;
-  }
-  .btn-mobile span {
-    position: absolute;
-    display: block;
-    height: 3px;
-    width: 100%;
-    border-radius: 30px;
-    background-color: black;
-    transition: 0.25s ease-in-out;
-  }
-  .btn-mobile span:nth-child(1) {
-    top: 0;
-  }
-  .btn-mobile span:nth-child(2) {
-    top: 8px;
-  }
-  .btn-mobile span:nth-child(3) {
-    top: 16px;
-  }
-  .hed.active .btn-mobile span:nth-child(1) {
-    transform: rotate(-135deg);
-    top: 8px;
-  }
-  .hed.active .btn-mobile span:nth-child(2) {
-    display: none;
-  }
-  .hed.active .btn-mobile span:nth-child(3) {
-    transform: rotate(135deg);
-    top: 8px;
-  }
   .artigo-membros {
     grid-template-columns: 350px 350px;
     gap: 20px;
