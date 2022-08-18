@@ -37,7 +37,7 @@ body {
   flex-direction: column;
   background-color: var(--cor01);
 }
-header {
+header{
   width: 100%;
   background-color: var(--cor03);
   top: 0;
@@ -48,9 +48,19 @@ header {
   box-shadow: 1px 2px 5px rgba(0, 0, 0, 0.4);
   z-index: 2;
   padding: 0% 5%;
-  justify-content: space-between;
+  justify-content: space-evenly;
 }
-
+.menu{
+  width: 100%;
+  top: 0;
+  display: flex;
+  height: 50px;
+  position: fixed;
+  align-items: center;
+  z-index: 2;
+  padding: 0% 5%;
+  justify-content: space-evenly;
+}
 .logo {
   font-family: var(--fonte02);
   font-size: 35px;
@@ -168,6 +178,7 @@ p {
 .btn-mobile {
   display: none;
   padding: 5px;
+  position: absolute;
 }
 
 @media (max-width: 950px) {
