@@ -84,6 +84,7 @@ header{
 }
 .items {
   font-weight: 500;
+  /* padding-left: 10px; */
 }
 .input_pesquisar {
   position: relative;
