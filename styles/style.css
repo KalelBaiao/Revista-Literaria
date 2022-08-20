@@ -112,7 +112,7 @@ main {
 .container-principal {
   display: block;
   width: 100%;
-  height: 100%;
+  height: 600px;
   border-radius: 16px;
   background-color: white;
 }
@@ -121,6 +121,7 @@ main {
   justify-content: center;
   align-items: center;
   width: 100%;
+  height: 100%;
   min-height: 600px;
   border-radius: 16px;
   position: relative;
@@ -283,7 +284,7 @@ p {
   }
   .artigo-principal {
     flex-direction: column;
-    height: 85%;
+    height: 100%;
   }
   .menu {
     position: relative;
