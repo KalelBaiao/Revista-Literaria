@@ -9,13 +9,18 @@ main {
   padding: 0% 10%;
 }
 .container-contato {
+  width: 100%;
+  min-height: 75%;
+  display: block;
+}
+.artigo-contato {
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
   width: 100%;
-  margin-top: 80px;
-  height: 75%;
+  min-height: 600px;
+  /* padding-bottom: 50px; */
   border-radius: 16px;
   background-color: black;
   padding: 20px;
@@ -27,7 +32,6 @@ h2 {
   color: white;
   margin-bottom: 2rem;
   text-align: center;
-  transition: .5s;
 }
 
 .form-contato {
@@ -64,19 +68,19 @@ h2 {
 }
 
 .form-contato button {
-    display: block;
-    padding: 1rem;
-    background-color: rgb(67, 67, 228);
-    color: white;
-    font: inherit;
-    text-transform: uppercase;
-    border: none;
-    border-radius: 8px;
-    cursor: pointer;
-    transition: .2s;
+  display: block;
+  padding: 1rem;
+  background-color: rgb(67, 67, 228);
+  color: white;
+  font: inherit;
+  text-transform: uppercase;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.2s;
 }
-@media (max-width: 650px){
-    .container-contato h1{
-        font-size: 35px;
-    }
+@media (max-width: 650px) {
+  .container-contato h1 {
+    font-size: 2rem;
+  }
 }
