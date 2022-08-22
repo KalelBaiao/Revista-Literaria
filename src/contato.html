@@ -10,7 +10,7 @@
   <link rel="stylesheet" href="../styles/contato.css">
 </head>
 
-<body>
+<body> 
   <section class="menu-fixed">
     <header class="hed">
       <div class="menu">
@@ -49,14 +49,17 @@
     <section class="container-contato">
       <article class="artigo-contato">
           <h1>Formulário de Contato</h1>
-          <form action="https://formsubmit.co/kalelbaiao2@gmail.com" method="POST" class="form-contato">
-            <!-- <input type="hidden" name="_captcha" value="false"> -->
+          <form action="https://formsubmit.co/" method="POST" class="form-contato">
+            <input type="hidden" name="_captcha" value="false">
+            <input type="hidden" name="_next" value="false">
             <label for="name">Nome</label>
             <input type="text" name="name" id="name" required>
             <label for="email">E-mail</label>
             <input type="email" name="email" id="email" required>
-            <label for="message">Mensagem</label>
-            <textarea name="message" id="message" placeholder="Escreva aqui"></textarea>
+            <!-- <label for="message">Mensagem</label>
+            <textarea name="message" id="message" placeholder="Escreva aqui"></textarea> -->
+            <label for="arquivo">Arquivo</label>
+            <input type="file" name="arquivo" id="arquivo" required>
             <button type="submit">Enviar</button>
           </form>
       </article>
