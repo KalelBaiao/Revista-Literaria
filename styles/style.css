@@ -7,6 +7,7 @@
 
 @import url("https://fonts.googleapis.com/css2?family=Ms+Madi&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Lavishly+Yours&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700;800;900&display=swap');
 :root {
   --fonte_titulo: "Poppins", sans-serif;
   --fonte_literatus: "Great Vibes", "cursive";
@@ -14,6 +15,7 @@
   --fonte_2: "Fondamento", "cursive";
   --fonte01: "Ms Madi", cursive;
   --fonte02: "Lavishly Yours", cursive;
+  --fonte03: 'Cinzel', serif;
   --cor01: white;
   --cor02: white;
   --cor03: #add8e6;
@@ -79,10 +81,12 @@ header {
 }
 .menu_items {
   display: flex;
-  font-family: var(--fonte_titulo);
-  gap: 40px;
+  font-family: var(--fonte03);
+  gap: 35px;
   font-size: 18px;
   z-index: 2;
+  font-weight: bolder;
+  /* text-transform: uppercase; */
 }
 .menu_items a:hover,
 .input_pesquisar a:hover {
