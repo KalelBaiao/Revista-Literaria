@@ -8,6 +8,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Ms+Madi&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Lavishly+Yours&display=swap");
 @import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700;800;900&display=swap');
+
 :root {
   --fonte_titulo: "Poppins", sans-serif;
   --fonte_literatus: "Great Vibes", "cursive";
@@ -59,6 +60,7 @@ header {
   padding: 0% 5%;
   justify-content: space-evenly;
   position: fixed;
+
 }
 .menu {
   width: 100%;
@@ -70,6 +72,7 @@ header {
   z-index: 2;
   padding: 0% 5%;
   justify-content: space-evenly;
+
 }
 .logo {
   font-family: var(--fonte02);
@@ -78,6 +81,7 @@ header {
   letter-spacing: 1px;
   font-style: italic;
   /* text-transform: uppercase; */
+  margin-right: 20px;
 }
 .menu_items {
   display: flex;
@@ -87,6 +91,7 @@ header {
   z-index: 2;
   font-weight: bolder;
   /* text-transform: uppercase; */
+  
 }
 .menu_items a:hover,
 .input_pesquisar a:hover {
