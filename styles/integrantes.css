@@ -105,9 +105,10 @@ main {
   z-index: 1;
 }
 .card-membro span {
-  background-color: darkgray;
+  /* background-color: lightgray; */
   padding: 7px;
   border-radius: 20px;
+  box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.2);
 }
 .redes-sociais {
   width: 100%;
