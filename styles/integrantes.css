@@ -74,18 +74,18 @@ main {
   top: 0;
   border-radius: 8px 8px 0px 0px;
   background: linear-gradient(45deg, #96cbfc, #82bdf5, #fde6e2, #fcd9d4 80%);
-  background-size: 300% 300%;
+  background-size: 200% 200%;
   animation: back 15s ease infinite;
 }
 @keyframes back {
   0%{
-    background-position: 10% 50%;
+    background-position: 0% 50%;
   }
   50%{
     background-position: 50% 100%;
   }
   100%{
-    background-position: 10% 50%;
+    background-position: 0% 50%;
   }
 }
 .card-mensagem-principal {
