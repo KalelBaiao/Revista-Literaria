@@ -2,9 +2,6 @@
 main {
   height: auto;
 }
-body{
-  background-color: #F9F0E7;
-}
 .container-membros {
   display: flex;
   align-items: center;
