@@ -18,11 +18,11 @@
   --fonte02: "Lavishly Yours", cursive;
   --fonte03: 'Cinzel', serif;
   --cor01: #000000;
-  --cor02: #F9F0E7;
+  --cor02: white;
   --cor03: #add8e6;
 }
 .dark{
-  --cor01: #fff;
+  --cor01: whitesmoke;
   --cor02: #000000;
 }
 * {
