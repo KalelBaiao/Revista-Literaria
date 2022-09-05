@@ -32,7 +32,7 @@ main {
 h1,
 h2 {
   font-size: 3rem;
-  color: rgb(0, 0, 0);
+  color: var(--cor01);
   margin-bottom: 2rem;
   text-align: center;
 }
@@ -52,7 +52,7 @@ h2 {
 }
 
 .form-contato label {
-  color: rgb(0, 0, 0);
+  color: var(--cor01);
   line-height: 1;
   margin-bottom: 8px;
   font-weight: bold;
@@ -78,7 +78,7 @@ h2 {
   display: block;
   padding: 1rem;
   background-color: #4343e4;
-  color: white;
+  color: var(--cor02);
   font: inherit;
   text-transform: uppercase;
   border: none;
