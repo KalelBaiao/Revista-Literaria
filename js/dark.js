@@ -1,6 +1,7 @@
 const chk = document.getElementById('chk')
 var darkMode = localStorage.getItem('darkMode?')
 
+
 if(darkMode == "true"){
     chk.checked = true
     document.body.classList.add('dark')
