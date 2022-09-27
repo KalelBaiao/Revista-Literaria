@@ -143,6 +143,7 @@ header {
 main {
   width: 100%;
   height: 100%;
+  margin-top: 60px;
 }
 .container-principal, .quem-somos-nos {
   display: flex;
@@ -153,6 +154,7 @@ main {
   background-color: var(--cor02);
   align-items: center;
   justify-content: center;
+  flex-direction: column;
 }
 .artigo-principal {
   display: flex;
