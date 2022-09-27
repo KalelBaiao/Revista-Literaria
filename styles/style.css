@@ -85,7 +85,15 @@ header {
   letter-spacing: 1px;
   font-style: italic;
   /* text-transform: uppercase; */
-  margin-right: 20px;
+
+  width: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.logo img{
+  width: 40px;
+  
 }
 .menu_items {
   display: flex;
@@ -98,7 +106,7 @@ header {
   
 }
 .menu_items a:hover,
-.input_pesquisar a:hover {
+.pesquisar a:hover {
   transition-duration: 0.4s;
   /* font-weight: 600; */
   text-shadow: 1px 0px 0px rgba(0, 0, 0, 0.8);
@@ -106,28 +114,45 @@ header {
 .items {
   font-weight: 500;
 }
-.input_pesquisar {
+.pesquisar {
   position: relative;
   display: flex;
   align-items: center;
   justify-content: center;
   /* margin-left: 10vw; */
 }
-.icon a {
+.icon-lupa a {
   display: flex;
   align-items: center;
   justify-content: center;
 }
+.input-pesquisar{
+  position: relative;
+  margin-left: 5px;
+}
+.input-pesquisar input{
+  padding: 10px;
+  border-radius: 20px;
+  border: none;
+  width: 200px;
+  font-size: 1em;
+}
+.hide{
+  display: none;
+}
 main {
   width: 100%;
-  height: 100vh;
+  height: 100%;
 }
-.container-principal {
-  display: block;
+.container-principal, .quem-somos-nos {
+  display: flex;
   width: 100%;
-  height: 90%;
+  height: 100%;
+  min-height: 90vh;
   border-radius: 16px;
   background-color: var(--cor02);
+  align-items: center;
+  justify-content: center;
 }
 .artigo-principal {
   display: flex;
@@ -136,27 +161,32 @@ main {
   width: 100%;
   height: 100%;
   min-height: 600px;
+  max-width: 1300px;
   border-radius: 16px;
   position: relative;
+  padding: 0 100px;
 }
 
 .imagem img {
   width: 40vw;
   background-size: cover;
+  width: 100%;
   min-width: 300px;
 }
-.artigo-text, .artigo-imagem{
-  height: 100%;
+.artigo-text{
   background-color: var(--cor02);
-  border-radius: 20px;
   /* box-shadow: 1px 2px 5px rgba(0, 0, 0, 0.4); */
   position: relative;
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  color: var(--cor01);
+  /* color: var(--cor01); */
   text-align: center;
+  width: 60%;
+}
+.artigo-imagem{
+  width: 40%;
 }
 .text {
   color: var(--cor01);
@@ -164,25 +194,28 @@ main {
   flex-direction: column;
   padding: 30px;
   position: relative;
-  width: 90%;
+  width: 100%;
   /* margin-bottom: 300px; */
 }
-.text h2,
-p {
-  font-family: "Times New Roman", Times, serif;
+.text h1,
+h2 {
+  font-family: 'Times New Roman', Times, serif;
+  text-align: left;
 }
 .text h2 {
-  font-size: 2em;
-  padding: 15px;
-  text-align: left;
-  font-family: var(--fonte_2);
+  font-size: 3em;
+  font-family: var(--fonte03);
+  font-weight: 500;
 }
-.text p {
-  font-size: 1.2em;
-  text-align: justify;
-  text-indent: 2em;
-  margin-top: 5px;
-  line-height: 30px;
+.text h1 {
+  font-family: var(--fonte02);
+  font-weight: 500;
+  font-size: 10em;
+}
+
+.quem-somos-nos{
+  background-color:  rgba(129, 177, 195, 0.627);
+
 }
 
 .btn-mobile {
@@ -191,7 +224,7 @@ p {
   position: absolute;
 }
 
-@media (max-width: 950px) {
+@media (max-width: 1100px) {
   .btn-mobile {
     position: absolute;
     display: block;
@@ -308,6 +341,9 @@ p {
   header {
     padding: 0% 15%;
   }
+  .pesquisar{
+    display: none;
+  }
 }
 
 footer{
@@ -318,7 +354,11 @@ footer{
   align-items: center;
   justify-content: center;
 }
-
+.btn-dark{
+  position: absolute;
+  top: 60px;
+  right: 15px;
+}
 .checkbox{
   opacity: 0;
   position: absolute;

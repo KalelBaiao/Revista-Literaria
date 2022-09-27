@@ -11,40 +11,53 @@
 </head>
 
 <body>
-  <section class="menu-fixed">
-    <header class="hed">
-      <div class="menu">
-        <div class="logo">
-          <a href="#" class="logo">Literatus</a>
-        </div>
-        <nav class="Dnav">
-          <ul class="menu_items">
-            <li><a href="index.html" class="items">Início</a></li>
-            <li><a href="integrantes.html" class="items">Integrantes</a></li>
-            <li>
-              <a href="producoes-literarias.html" class="items">Produções Literárias</a>
-            </li>
-            <li><a href="contato.html" class="items">Contato</a></li>
-            <li class="input_pesquisar">
-              <div class="icon">
-                <a href="#" class="lupa">
-                  <ion-icon name="search-outline" class="ico"></ion-icon>
-                </a>
-            </li>
-          </ul>
-          <!-- <input type="text" placeholder="Pesquisar" /> -->
+  <header class="hed">
+    <div class="menu">
+      
+      <div class="logo">
+        <img src="../img/literatura (2).png" alt="imagem da logo">
+        <!-- <a href="#" class="logo">Literatus</a> -->
       </div>
+      <nav class="Dnav">
+        <ul class="menu_items">
+          <li><a href="index.html" class="items">Início</a></li>
+          <li><a href="integrantes.html" class="items">Integrantes</a></li>
+          <li>
+            <a href="producoes-literarias.html" class="items">Produções Literárias</a>
+          </li>
+          <li><a href="contato.html" class="items">Contato</a></li>
+        </ul>
       </nav>
+      <div class="pesquisar">
+        <div class="icon-lupa">
+          <a href="#" class="lupa">
+            <ion-icon name="search-outline" class="ico"></ion-icon>
+          </a>
+        </div>
+        <div class="input-pesquisar hide">
+          <input type="text" placeholder="Pesquisar" />
+        </div>
       </div>
-      <div class="menu-mobile">
-        <button class="btn-mobile">
-          <span></span>
-          <span></span>
-          <span></span>
-        </button>
-      </div>
-    </header>
-  </section>
+    </div>
+
+    <div class="menu-mobile">
+      <button class="btn-mobile">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+
+    <div class="btn-dark">
+      <input type="checkbox" class="checkbox" id="chk">
+
+      <label class="label" for="chk">
+        <ion-icon name="moon-outline" class=" fas fa-lua"></ion-icon>
+        <ion-icon name="sunny-outline" class="fas fa-sol"></ion-icon>
+        <div class="bola"></div>
+      </label>
+    </div>
+  </header>
 
   <main>
     <section class="section-membros">
@@ -68,7 +81,7 @@
           </div>
           <div class="card-membro">
             <div class="card-mensagem-principal">
-              <img src="../img/foto-kaique.jfif" alt="foto da Elexandra">
+              <img src="../img/foto-kaique.jpeg" alt="foto da Elexandra">
               <h1>Kaique Leonel</h1>
               <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sequi expedita?</p>
             </div>
@@ -117,15 +130,8 @@
   </main>
 
   <footer>
-    <div>
-      <input type="checkbox" class="checkbox" id="chk">
-
-      <label class="label" for="chk">
-        <ion-icon name="moon-outline" class=" fas fa-lua"></ion-icon>
-        <ion-icon name="sunny-outline" class="fas fa-sol"></ion-icon>
-        <div class="bola"></div>
-      </label>
-    </div>
+    
+    
   </footer>
   <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
   <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
