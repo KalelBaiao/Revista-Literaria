@@ -361,6 +361,9 @@ h2 {
   .text h1{
     font-size: 6em;
   }
+  main{
+    margin-top: 100px;
+  }
 }
 
 footer{

@@ -18,3 +18,21 @@
   width: 100%;
   align-items: center;
 }
+
+.text h2, p{
+  font-family: "Times New Roman", Times, serif;
+}
+.text h2{
+  font-size: 2em;
+  padding: 15px;
+  text-align: left;
+  font-family: var(--fonte_2);
+  font-weight: 600;
+}
+.text p{
+  font-size: 1.4em;
+  text-align: justify;
+  text-indent: 2em;
+  margin-top: 5px;
+  line-height: 30px;
+}
