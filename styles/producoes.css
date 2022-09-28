@@ -1,14 +1,21 @@
 @charset "UTF-8";
 
+main{
+  background-color: #ebebeb;
+}
 .container-producoes {
   display: flex;
   /* justify-content: center; */
   align-items: center;
   flex-direction: column;
-  height: 90vh;
-  border-radius: 16px;
-  background-color: var(--cor02);
+  height: 100%;
+  min-height: 90vh;
+  border-radius: 5px;
+  background-color: white;
   max-width: 900px;
+  width: 100%;
+  margin: auto;
+  padding: 0 100px;
 }
 .artigo-producoes {
   display: flex;
@@ -18,21 +25,26 @@
   width: 100%;
   align-items: center;
 }
-
+.text{
+  text-align: justify;
+  text-indent: 50px;
+  padding: 30px;
+  flex-direction: column;
+}
 .text h2, p{
   font-family: "Times New Roman", Times, serif;
 }
 .text h2{
-  font-size: 2em;
+  font-size: 50px;
   padding: 15px;
   text-align: left;
   font-family: var(--fonte_2);
   font-weight: 600;
 }
 .text p{
-  font-size: 1.4em;
+  font-size: 23px;
   text-align: justify;
-  text-indent: 2em;
+  text-indent: 40px;
   margin-top: 5px;
   line-height: 30px;
 }

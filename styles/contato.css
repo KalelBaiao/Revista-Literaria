@@ -25,8 +25,8 @@ main {
   border-radius: 16px;
   padding: 20px 40px;
   margin: auto;
-  background-color: #87cefacc;
-  background-image: linear-gradient(to top, #82b4ff, #87cefacc);
+  background-color: #9fc3de;
+  /* background-image: linear-gradient(to top, #82b4ff, #87cefacc); */
 }
 
 h1,

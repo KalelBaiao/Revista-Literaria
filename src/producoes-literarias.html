@@ -11,53 +11,56 @@
 </head>
 
 <body>
-  <header class="hed">
-    <div class="menu">
+  <div class="menu-fixed">
 
-      <div class="logo">
-        <img src="../img/literatura (2).png" alt="imagem da logo">
-        <!-- <a href="#" class="logo">Literatus</a> -->
-      </div>
-      <nav class="Dnav">
-        <ul class="menu_items">
-          <li><a href="index.html" class="items">Início</a></li>
-          <li><a href="integrantes.html" class="items">Integrantes</a></li>
-          <li>
-            <a href="producoes-literarias.html" class="items">Produções Literárias</a>
-          </li>
-          <li><a href="contato.html" class="items">Contato</a></li>
-        </ul>
-      </nav>
-      <div class="pesquisar">
-        <div class="icon-lupa">
-          <a href="#" class="lupa">
-            <ion-icon name="search-outline" class="ico"></ion-icon>
-          </a>
+    <header class="hed">
+      <div class="menu">
+
+        <div class="logo">
+          <img src="../img/literatura (2).png" alt="imagem da logo">
+          <!-- <a href="#" class="logo">Literatus</a> -->
         </div>
-        <div class="input-pesquisar hide">
-          <input type="text" placeholder="Pesquisar" />
+        <nav class="Dnav">
+          <ul class="menu_items">
+            <li><a href="index.html" class="items">Início</a></li>
+            <li><a href="integrantes.html" class="items">Integrantes</a></li>
+            <li>
+              <a href="producoes-literarias.html" class="items">Produções Literárias</a>
+            </li>
+            <li><a href="contato.html" class="items">Contato</a></li>
+          </ul>
+        </nav>
+        <div class="pesquisar">
+          <div class="icon-lupa">
+            <a href="#" class="lupa">
+              <ion-icon name="search-outline" class="ico"></ion-icon>
+            </a>
+          </div>
+          <div class="input-pesquisar hide">
+            <input type="text" placeholder="Pesquisar" />
+          </div>
         </div>
       </div>
-    </div>
 
-    <div class="menu-mobile">
-      <button class="btn-mobile">
-        <span></span>
-        <span></span>
-        <span></span>
-      </button>
-    </div>
+      <div class="menu-mobile">
+        <button class="btn-mobile">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
 
-    <div class="btn-dark">
-      <input type="checkbox" class="checkbox" id="chk">
+      <div class="btn-dark">
+        <input type="checkbox" class="checkbox" id="chk">
 
-      <label class="label" for="chk">
-        <ion-icon name="moon-outline" class=" fas fa-lua"></ion-icon>
-        <ion-icon name="sunny-outline" class="fas fa-sol"></ion-icon>
-        <div class="bola"></div>
-      </label>
-    </div>
-  </header>
+        <label class="label" for="chk">
+          <ion-icon name="moon-outline" class=" fas fa-lua"></ion-icon>
+          <ion-icon name="sunny-outline" class="fas fa-sol"></ion-icon>
+          <div class="bola"></div>
+        </label>
+      </div>
+    </header>
+  </div>
   <main>
 
     <section class="container-producoes">
@@ -91,9 +94,63 @@
       </article>
     </section>
   </main>
-  <footer>
+  <footer class="footer">
+    <div class="container__content__footer">
+      <div class="card_footer">
+        <div class="info_footer">
+          <div class="endereco_footer card_content_footer">
+            <div class="icon_footer">
+              <ion-icon name="pin"></ion-icon>
+            </div>
+            <p>
+              MT-473 IFMT <br />
+              <strong>Pontes e Lacerda, Mato Grosso</strong>
+            </p>
+          </div>
+          <div class="contato_footer card_content_footer">
+            <div class="icon_footer">
+              <ion-icon name="call"></ion-icon>
+            </div>
+            <p>(65) 3266-8200</p>
+          </div>
+          <div class="contato_footer card_content_footer">
+            <div class="icon_footer">
+              <ion-icon name="mail"></ion-icon>
+            </div>
+            <p>ifmt@gmail.com</p>
+          </div>
+        </div>
+      </div>
 
+      <div class="card_footer card-redes-sociais">
+        <!-- <div class="text_footer">
+          <h1>Sobre o Laboratório</h1>
+          <p>
+            Nós somos um grupo de pesquisa do Instituto Federal do Mato Grosso
+            - Pontes e Lacerda. Todos do Laboratório são developers e cada um
+            tem seus conhecimentos.
+          </p>
+        </div> -->
 
+        <div class="redes_sociais">
+          <div class="icon_footer_redes">
+            <a href="https://www.instagram.com/revistaliteratus/" target="_blank">
+              <ion-icon class="insta" name="logo-instagram"></ion-icon>
+            </a>
+          </div>
+          <!-- <div class="icon_footer_redes">
+            <a href="#">
+              <ion-icon class="face" name="logo-facebook"></ion-icon>
+            </a>
+          </div> -->
+          <!-- <div class="icon_footer_redes">
+            <a href="#">
+              <ion-icon name="logo-linkedin" class="linkedin"></ion-icon>
+            </a>
+          </div> -->
+        </div>
+      </div>
+    </div>
   </footer>
   <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
   <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
