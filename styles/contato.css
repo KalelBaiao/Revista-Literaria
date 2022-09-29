@@ -29,8 +29,8 @@ main {
   /* background-image: linear-gradient(to top, #82b4ff, #87cefacc); */
 }
 
-h1,
-h2 {
+.container-contato h1,
+.container-contato h2 {
   font-size: 3rem;
   color: var(--cor01);
   margin-bottom: 2rem;

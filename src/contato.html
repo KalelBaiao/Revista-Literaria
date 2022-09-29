@@ -7,10 +7,87 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Contato</title>
   <link rel="stylesheet" href="../styles/style.css" />
+  <link rel="stylesheet" href="../styles/menu.css">
   <link rel="stylesheet" href="../styles/contato.css">
+  <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 </head>
 
 <body>
+
+  <nav class="sidebar close">
+    <header>
+      <div class="image-text">
+        <span class="image">
+          <img src="../img/literatura (2).png" alt="Logo Literatus">
+        </span>
+
+        <div class="text-menu header-text">
+          <h2>Resvista</h2>
+          <h1>Literatus</h1>
+        </div>
+      </div>
+      <i class='bx bx-chevron-right toggle'></i>
+    </header>
+
+    <div class="menu-bar">
+      <div class="menu-mobile">
+        <li class="search-box">
+          <i class='bx bx-search-alt icon'></i>
+          <input type="text" placeholder="Pesquisar">
+        </li>
+        <ul class="menu-links">
+          <li class="nav-link">
+            <a href="index.html">
+              <i class='bx bx-home-alt icon'></i>
+              <span class="text-menu nav-text">Inicio</span>
+            </a>
+          </li>
+          <li class="nav-link">
+            <a href="integrantes.html">
+              <i class='bx bx-group icon'></i>
+              <span class="text-menu nav-text">Integrantes</span>
+            </a>
+          </li>
+          <li class="nav-link">
+            <a href="edicoes.html">
+              <i class='bx bx-book-bookmark icon'></i>
+              <span class="text-menu nav-text">Edições</span>
+            </a>
+          </li>
+          <li class="nav-link">
+            <a href="contato.html">
+              <i class='bx bx-envelope icon'></i>
+              <span class="text-menu nav-text">Contato</span>
+            </a>
+          </li>
+        </ul>
+      </div>
+
+      <div class="button-content">
+        <li class="">
+          <a href="#">
+            <i class='bx bx-cog icon'></i>
+            <span class="text-menu nav-text">Configurações</span>
+          </a>
+        </li>
+
+        <li class="mode">
+          <div class="moon-sun">
+            <i class='bx bx-moon icon moon'></i>
+            <i class='bx bx-sun icon sun'></i>
+          </div>
+          <span class="mode-text text-menu">Dark Mode</span>
+
+          <div class="toggle-switch">
+            <span class="switch"></span>
+          </div>
+        </li>
+      </div>
+    </div>
+  </nav>
+
+
+
   <div class="menu-fixed">
 
     <header class="hed">
@@ -25,7 +102,7 @@
             <li><a href="index.html" class="items">Início</a></li>
             <li><a href="integrantes.html" class="items">Integrantes</a></li>
             <li>
-              <a href="producoes-literarias.html" class="items">Produções Literárias</a>
+              <a href="edicoes.html" class="items">Produções Literárias</a>
             </li>
             <li><a href="contato.html" class="items">Contato</a></li>
           </ul>
