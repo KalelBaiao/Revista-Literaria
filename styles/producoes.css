@@ -2,6 +2,7 @@
 
 main{
   background-color: #ebebeb;
+  /* padding: 20px; */
 }
 .container-producoes {
   display: flex;
@@ -31,15 +32,16 @@ main{
   padding: 30px;
   flex-direction: column;
 }
-.text h2, p{
+.text h2, .text p{
   font-family: "Times New Roman", Times, serif;
 }
 .text h2{
-  font-size: 50px;
+  font-size: 47px;
   padding: 15px;
   text-align: left;
   font-family: var(--fonte_2);
   font-weight: 600;
+  width: 100%;
 }
 .text p{
   font-size: 23px;
@@ -47,4 +49,47 @@ main{
   text-indent: 40px;
   margin-top: 5px;
   line-height: 30px;
+}
+@media (max-width: 1000px){
+  main{
+    padding: 30px;
+    padding-bottom: 0;
+  }
+  .container-producoes {
+    padding: 0 20px;
+    width: 100%;
+  }
+  .artigo-producoes{
+    padding: 0;
+  }
+  .text{
+    margin: 0;
+    padding-bottom: 20px;
+  }
+  .text h2{
+    font-size: 40px;
+  }
+  .text p{
+    font-size: 20px;
+  }
+}
+@media (max-width: 650px){
+  main{
+    padding: 10px;
+    padding-bottom: 0;
+  }
+}
+@media (max-width: 500px){
+  .container-producoes{
+    padding: 0;
+  }
+  .text{
+    padding: 20px;
+  }
+  .text h2{
+    font-size: 35px;
+  }
+  .text p{
+    font-size: 19px;
+  }
 }
