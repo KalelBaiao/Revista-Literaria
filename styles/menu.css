@@ -292,7 +292,7 @@ body {
     }
 
     body {
-        width: calc(100vw - 30px);
+        width: calc(100vw - 15px);
         position: absolute;
         right: 0;
     }
