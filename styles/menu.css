@@ -17,7 +17,7 @@
     --primary-color: #695cfe;
     --primary-color-light: #f6f5ff;
     --toggle-color: #ddd;
-    --text-color: #707070;
+    --text-color: #2e2e2e;
 
     --tran-02: all .2s ease;
     --tran-03: all .3s ease;
@@ -28,7 +28,11 @@
 body {
     transition: var(--tran-05);
     font-family: 'Poppins', sans-serif;
+    width: calc(100vw - 88px);
+    position: absolute;
+    right: 0; 
 }
+
 
 .sidebar {
     position: fixed;
@@ -40,7 +44,8 @@ body {
     background: #9fc3de;
     transition: var(--tran-05);
     z-index: 2;
-    display: none;
+    display: block;
+    border-right: 1px solid rgba(0, 0, 0, 0.1);
 }
 
 .sidebar.close {
@@ -78,13 +83,14 @@ body {
     opacity: 1;
 }
 
-.sidebar.close .text-menu {
+.sidebar.close .text-menu, .sidebar.close .search-box input {
     opacity: 0;
 }
 
 .header-text {
     display: flex;
     flex-direction: column;
+    margin-top: 10px;
 }
 
 .header-text h2 {
@@ -162,7 +168,12 @@ body {
 .close .search-box input{
     background: #9fc3de;
 }
-
+.close .search-box:hover{
+    background-color: var(--primary-color);
+}
+.close .search-box:hover .icon{
+    color: var(--sidebar-color);
+}
 .sidebar li a {
     text-decoration: none;
     height: 100%;
@@ -251,6 +262,9 @@ body {
     border-radius: 25px;
     background: var(--toggle-color);
 }
+.dark .switch{
+    background-color: var(--primary-color);
+}
 
 .switch::before {
     content: '';
@@ -275,18 +289,33 @@ body {
     margin-bottom: 20px;
 }
 
-@media (max-width: 1100px) {
-    .sidebar {
-        display: block;
-    }
 
-    .menu-fixed {
+@media (max-width: 600px) {
+    /* .sidebar {
+        display: block;
+    } */
+
+    /* .menu-fixed {
         display: none;
-    }
+    } */
 
     body {
-        width: calc(100vw - 88px);
-        position: absolute;
-        right: 0; 
+        width: calc(100vw - 20px);
+    }
+    .sidebar.close{
+        width: 15px;
+        padding: 0;
+    }
+    .sidebar.close header .toggle{
+        right: -15px;
+    }
+    .sidebar.close .menu-bar div{
+        display: none;
+    }
+    .sidebar.close .image{
+        display: none;
+    }
+    .sidebar.close .text-menu {
+        opacity: 0;
     }
 }

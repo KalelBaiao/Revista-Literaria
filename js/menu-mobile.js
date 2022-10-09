@@ -6,12 +6,12 @@
 //     hed.classList.toggle('active')
 // })
 
-const iconLupa = document.querySelector(".icon-lupa")
+// const iconLupa = document.querySelector(".icon-lupa")
 
-iconLupa.addEventListener('click', () => {
-    const inputPesquisar = document.querySelector(".input-pesquisar")
-    inputPesquisar.classList.toggle('hide')
-})
+// iconLupa.addEventListener('click', () => {
+//     const inputPesquisar = document.querySelector(".input-pesquisar")
+//     inputPesquisar.classList.toggle('hide')
+// })
 
 
 
