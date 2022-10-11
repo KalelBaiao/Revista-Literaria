@@ -14,7 +14,8 @@
 :root {
     --body-color: #e4e9f7;
     --sidebar-color: #fff;
-    --primary-color: #695cfe;
+    /* --primary-color: #695cfe; */
+    --primary-color: #7b84ff;
     --primary-color-light: #f6f5ff;
     --toggle-color: #ddd;
     --text-color: #2e2e2e;
@@ -41,11 +42,11 @@ body {
     height: 100%;
     width: 250px;
     padding: 10px 14px;
-    background: #9fc3de;
+    background: #f8f8f8;
     transition: var(--tran-05);
     z-index: 2;
     display: block;
-    border-right: 1px solid rgba(0, 0, 0, 0.1);
+    box-shadow: 5px 0px 15px rgba(128, 128, 128, 0.15);
 }
 
 .sidebar.close {
@@ -92,6 +93,10 @@ body {
     flex-direction: column;
     margin-top: 10px;
 }
+.close .header-text{
+    transform: translateX(-1000px);
+    opacity: 0;
+}
 
 .header-text h2 {
     font-weight: 600;
@@ -122,6 +127,7 @@ body {
     transition: var(--tran-03);
 }
 
+
 .sidebar .menu-bar {
     height: calc(100% - 50px);
     display: flex;
@@ -146,18 +152,18 @@ body {
 }
 
 .sidebar .search-box {
-    background: var(--primary-color-light);
+    background: #fdffff;
     border-radius: 6px;
     transition: var(--tran-04);
 }
-.close .search-box{
+/* .close .search-box{
     background: #9fc3de;
-}
+} */
 
 .search-box input {
     height: 100%;
     width: 100%;
-    background: var(--primary-color-light);
+    background: #fdffff;
     outline: none;
     border: none;
     border-radius: 6px;
@@ -210,7 +216,7 @@ body {
 .menu-bar .mode {
     position: relative;
     border-radius: 6px;
-    background: var(--primary-color-light);
+    background: #fdffff;
 }
 
 .menu-bar .mode .moon-sun {
@@ -248,11 +254,8 @@ body {
     min-width: 60px;
     cursor: pointer;
     border-radius: 6px;
-    background: var(--primary-color-light);
+    background: #fdffff;
     transition: var(--tran-05);
-}
-.sidebar.close .toggle-switch{
-    background: #9fc3de;
 }
 
 .toggle-switch .switch {
@@ -260,10 +263,10 @@ body {
     height: 22px;
     width: 44px;
     border-radius: 25px;
-    background: var(--toggle-color);
+    background: #ddd;
 }
 .dark .switch{
-    background-color: var(--primary-color);
+    background-color: #61e6e6;
 }
 
 .switch::before {
@@ -305,6 +308,7 @@ body {
     .sidebar.close{
         width: 15px;
         padding: 0;
+        box-shadow: 5px 0px 15px rgba(128, 128, 128, 0.1);
     }
     .sidebar.close header .toggle{
         right: -15px;
