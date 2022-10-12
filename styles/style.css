@@ -537,3 +537,16 @@ h2 {
 ion-icon{
   transition: .5s ease;
 }
+.quem-somos-nos#paralax{
+  background-image: url(../img/background-estanteDeLivros.jfif);
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: center;
+}
+.note-block{
+  height: 470px;
+  width: 500px;
+  background-colot: rgba(0, 0, 0, 0.5);
+  backdrop-filter:blur(5px);
+  border-radius: 25px;
+}
