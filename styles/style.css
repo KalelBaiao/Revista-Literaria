@@ -52,7 +52,7 @@ body {
 }
 .hed {
   width: 100%;
-  background-color: #9fc3de;
+  background-color: #9fc3de;;
   top: 0;
   display: flex;
   height: 50px;
@@ -428,7 +428,7 @@ h2 {
   /* background-color: red; */
   width: 600px;
   height: 100%;
-  color: white;
+  color: rgb(255, 255, 255);
   display: grid;
   grid-template-columns: 1fr 1fr;
   /* gap: 50px; */
