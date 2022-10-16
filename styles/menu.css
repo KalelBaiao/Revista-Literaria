@@ -29,7 +29,7 @@
 body {
     transition: var(--tran-05);
     font-family: 'Poppins', sans-serif;
-    width: calc(100vw - 88px);
+    width: calc(100vw - 105px);
     position: absolute;
     right: 0; 
 }
@@ -105,9 +105,9 @@ body {
 }
 
 .header-text h1 {
-    margin-top: -15px;
+    margin-top: -10px;
     font-size: 35px;
-    font-family: "Lavishly Yours", cursive;
+    font-family: var(--fonte02);
 } 
 
 .sidebar header .toggle {
@@ -303,7 +303,7 @@ body {
     } */
 
     body {
-        width: calc(100vw - 20px);
+        width: calc(100vw - 25px);
     }
     .sidebar.close{
         width: 15px;

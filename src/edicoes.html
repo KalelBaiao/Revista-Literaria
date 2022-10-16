@@ -1,94 +1,93 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Produções Literarias</title>
+    <link rel="stylesheet" href="../styles/style.css" />
+    <link rel="stylesheet" href="../styles/menu.css" />
+    <link rel="stylesheet" href="../styles/producoes.css" />
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+  </head>
 
-<head>
-  <meta charset="UTF-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Produções Literarias</title>
-  <link rel="stylesheet" href="../styles/style.css" />
-  <link rel="stylesheet" href="../styles/menu.css">
-  <link rel="stylesheet" href="../styles/producoes.css">
-  <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
-</head>
+  <body>
+    <nav class="sidebar close">
+      <header>
+        <div class="image-text">
+          <span class="image">
+            <img src="../img/literatura (2).png" alt="Logo Literatus" />
+          </span>
 
-<body> 
+          <div class="text-menu header-text">
+            <h2>Resvista</h2>
+            <h1>Literatus</h1>
+          </div>
+        </div>
+        <i class="bx bx-chevron-right toggle"></i>
+      </header>
 
-  <nav class="sidebar close">
-    <header>
-      <div class="image-text">
-        <span class="image">
-          <img src="../img/literatura (2).png" alt="Logo Literatus">
-        </span>
+      <div class="menu-bar">
+        <div class="menu-mobile">
+          <li class="search-box">
+            <i class="bx bx-search-alt icon"></i>
+            <input type="text" placeholder="Pesquisar" />
+          </li>
+          <ul class="menu-links">
+            <li class="nav-link">
+              <a href="index.html">
+                <i class="bx bx-home-alt icon"></i>
+                <span class="text-menu nav-text">Inicio</span>
+              </a>
+            </li>
+            <li class="nav-link">
+              <a href="integrantes.html">
+                <i class="bx bx-group icon"></i>
+                <span class="text-menu nav-text">Integrantes</span>
+              </a>
+            </li>
+            <li class="nav-link">
+              <a href="edicoes.html">
+                <i class="bx bx-book-bookmark icon"></i>
+                <span class="text-menu nav-text">Edições</span>
+              </a>
+            </li>
+            <li class="nav-link">
+              <a href="contato.html">
+                <i class="bx bx-envelope icon"></i>
+                <span class="text-menu nav-text">Contato</span>
+              </a>
+            </li>
+          </ul>
+        </div>
 
-        <div class="text-menu header-text">
-          <h2>Resvista</h2>
-          <h1>Literatus</h1>
+        <div class="button-content">
+          <li class="">
+            <a href="#">
+              <i class="bx bx-cog icon"></i>
+              <span class="text-menu nav-text">Configurações</span>
+            </a>
+          </li>
+
+          <li class="mode">
+            <div class="moon-sun">
+              <i class="bx bx-moon icon moon"></i>
+              <i class="bx bx-sun icon sun"></i>
+            </div>
+            <span class="mode-text text-menu">Dark Mode</span>
+
+            <div class="toggle-switch">
+              <span class="switch"></span>
+            </div>
+          </li>
         </div>
       </div>
-      <i class='bx bx-chevron-right toggle'></i>
-    </header>
+    </nav>
 
-    <div class="menu-bar">
-      <div class="menu-mobile">
-        <li class="search-box">
-          <i class='bx bx-search-alt icon'></i>
-          <input type="text" placeholder="Pesquisar">
-        </li>
-        <ul class="menu-links">
-          <li class="nav-link">
-            <a href="index.html">
-              <i class='bx bx-home-alt icon'></i>
-              <span class="text-menu nav-text">Inicio</span>
-            </a>
-          </li>
-          <li class="nav-link">
-            <a href="integrantes.html">
-              <i class='bx bx-group icon'></i>
-              <span class="text-menu nav-text">Integrantes</span>
-            </a>
-          </li>
-          <li class="nav-link">
-            <a href="edicoes.html">
-              <i class='bx bx-book-bookmark icon'></i>
-              <span class="text-menu nav-text">Edições</span>
-            </a>
-          </li>
-          <li class="nav-link">
-            <a href="contato.html">
-              <i class='bx bx-envelope icon'></i>
-              <span class="text-menu nav-text">Contato</span>
-            </a>
-          </li>
-        </ul>
-      </div>
-
-      <div class="button-content">
-        <li class="">
-          <a href="#">
-            <i class='bx bx-cog icon'></i>
-            <span class="text-menu nav-text">Configurações</span>
-          </a>
-        </li>
-
-        <li class="mode">
-          <div class="moon-sun">
-            <i class='bx bx-moon icon moon'></i>
-            <i class='bx bx-sun icon sun'></i>
-          </div>
-          <span class="mode-text text-menu">Dark Mode</span>
-
-          <div class="toggle-switch">
-            <span class="switch"></span>
-          </div>
-        </li>
-      </div>
-    </div>
-  </nav>
-
-
-
-  <!-- <div class="menu-fixed">
+    <!-- <div class="menu-fixed">
 
     <header class="hed">
       <div class="menu">
@@ -138,101 +137,129 @@
       </div>
     </header>
   </div> -->
-  <main>
+    <main>
+      <h1 class="edicoes">Edições</h1>
+      <section class="container-producoes">
+        <article class="artigo-producoes">
+          <div class="edicao">
+            <div class="titulo-edicao">
+              <h2>Edição Atual</h2>
+              <h3>v. 14 n. 25 (2022): Revista da CGU, 25,jan-jun/2022</h3>
+            </div>
+            <div class="conteudo-edicao">
+              <div class="image-edicao">
+                <img src="../img/foto-edicao.jpg" alt="" />
+              </div>
+              <div class="text-edicao">
+                <p>
+                  Esta edição apresenta onze trabalhos inéditos. Os sete
+                  primeiros compõem o Dossiê Especial “Dez anos da Lei de Acesso
+                  à Informação no Brasil: Trajetórias, avanços e desafios”, sob
+                  a coordenação dos editores convidados, Lourdes Morales, da
+                  Universidade de Guadalajara (UDG); Karina Furtado Rodrigues,
+                  da Escola de Comando e Estado-Maior do Exército (ECEME); e
+                  Temístocles Murilo de Oliveira Jr, doutor em Políticas
+                  Públicas pela Universidade Federal do Rio de Janeiro (UFRJ).
+                  Os quatro artigos seguintes são decorrentes do fluxo contínuo
+                  de submissões caracterizados por abordagens de inequívoco
+                  mérito acadêmico. Por fim, esta edição contempla o primeiro
+                  trabalho publicado na seção Resenhas.
+                </p>
 
-    <section class="container-producoes">
-      <article class="artigo-producoes">
-        <div class="text">
-          <h2>Resumo</h2>
-          <p>
-            É sabido que a leitura é um exercício deveras vantajoso para o
-            sujeito que a pratica porque, além de ser um excelente e saudável
-            entretenimento, estimula a criatividade, exercita o cérebro, melhora
-            a concentração e memorização, amplia o vocabulário, desperta a
-            flexibilidade analítica e desenvolve o encadeamento de ideias e as
-            habilidades de escrita.
-          </p>
-          <p>
-            Ora, para expressar-se bem, o sujeito tem de saber o que deseja
-            dizer e qual gênero textual lhe atende melhor, de modo que a
-            leitura, não somente de textos literários, se faz essencial para si.
-          </p>
-          <p>
-            Nesse sentido, um período mensal ou semanal que receba textos
-            autorais dos alunos do campus e que se proponha a oferecer aos seus
-            colaboradores ferramentas para desenvolver sua escrita e um olhar
-            crítico para o fazer pode representar um aumento expressivo de
-            leitores e, consequentemente, de escritores, de sujeitos críticos,
-            os quais, observadores de sua própria realidade, possibilitam aos
-            seus outros uma perspectiva diferente e, quiçá, mais acurada do
-            ambiente sócio-histórico-cultural no qual estão inseridos.
-          </p>
+                <div class="link-edicao">
+                  <strong>DOI:</strong>
+                  <a href="#">https://doi.org/10.36428/revistadacgu.v14i25</a>
+                </div>
+
+                <div class="data-edicao"><strong>Publicado:</strong><span>2022-05-31</span></div>
+              </div>
+            </div>
+          </div>
+          <div class="edicao">
+            <div class="titulo-edicao">
+              <h2>Edição Atual</h2>
+              <h3>v. 14 n. 25 (2022): Revista da CGU, 25,jan-jun/2022</h3>
+            </div>
+            <div class="conteudo-edicao">
+              <div class="image-edicao">
+                <img src="../img/foto-edicao.jpg" alt="" />
+              </div>
+              <div class="text-edicao">
+                <p>
+                  Esta edição apresenta onze trabalhos inéditos. Os sete
+                  primeiros compõem o Dossiê Especial “Dez anos da Lei de Acesso
+                  à Informação no Brasil: Trajetórias, avanços e desafios”, sob
+                  a coordenação dos editores convidados, Lourdes Morales, da
+                  Universidade de Guadalajara (UDG); Karina Furtado Rodrigues,
+                  da Escola de Comando e Estado-Maior do Exército (ECEME); e
+                  Temístocles Murilo de Oliveira Jr, doutor em Políticas
+                  Públicas pela Universidade Federal do Rio de Janeiro (UFRJ).
+                  Os quatro artigos seguintes são decorrentes do fluxo contínuo
+                  de submissões caracterizados por abordagens de inequívoco
+                  mérito acadêmico. Por fim, esta edição contempla o primeiro
+                  trabalho publicado na seção Resenhas.
+                </p>
+
+                <div class="link-edicao">
+                  <strong>DOI:</strong>
+                  <a href="#">https://doi.org/10.36428/revistadacgu.v14i25</a>
+                </div>
+
+                <div class="data-edicao"><strong>Publicado:</strong><span>2022-05-31</span></div>
+              </div>
+            </div>
+          </div>
+        </article>
+      </section>
+    </main>
+    <footer class="footer">
+      <div class="content_top">
+        <div class="left_footer">
+          <div class="text_footer">
+            <h1>Revista Literatus</h1>
+            <h2>Lorem ipsum dolor sit amet consectetur adipisicing elit.</h2>
+          </div>
+
+          <div class="logos_footer">
+            <a href="">
+              <img src="./Components/img/rain.png" alt="" />
+              <!-- Logo 1 -->
+            </a>
+            <a href="">
+              <img src="./Components/img/sunny.png" alt="" />
+              <!-- Logo 2 -->
+            </a>
+          </div>
         </div>
-      </article>
-    </section>
-  </main>
-  <footer class="footer">
-    <div class="container__content__footer">
-      <div class="card_footer">
-        <div class="info_footer">
-          <div class="endereco_footer card_content_footer">
-            <div class="icon_footer">
-              <ion-icon name="pin"></ion-icon>
-            </div>
-            <p>
-              MT-473 IFMT <br />
-              <strong>Pontes e Lacerda, Mato Grosso</strong>
-            </p>
+
+        <div class="infos_footer">
+          <div class="title_info_footer">
+            <h1>Informações:</h1>
           </div>
-          <div class="contato_footer card_content_footer">
-            <div class="icon_footer">
-              <ion-icon name="call"></ion-icon>
-            </div>
-            <p>(65) 3266-8200</p>
+          <div class="item_footer">
+            Contact: ifmt@gmail.com
           </div>
-          <div class="contato_footer card_content_footer">
-            <div class="icon_footer">
-              <ion-icon name="mail"></ion-icon>
-            </div>
-            <p>ifmt@gmail.com</p>
+          <div class="item_footer">
+            Localization: Rua Primvera do Oeste da Discordancia
           </div>
         </div>
       </div>
-
-      <div class="card_footer card-redes-sociais">
-        <!-- <div class="text_footer">
-          <h1>Sobre o Laboratório</h1>
-          <p>
-            Nós somos um grupo de pesquisa do Instituto Federal do Mato Grosso
-            - Pontes e Lacerda. Todos do Laboratório são developers e cada um
-            tem seus conhecimentos.
-          </p>
-        </div> -->
-
-        <div class="redes_sociais">
-          <div class="icon_footer_redes">
-            <a href="https://www.instagram.com/revistaliteratus/" target="_blank">
-              <ion-icon class="insta" name="logo-instagram"></ion-icon>
-            </a>
-          </div>
-          <!-- <div class="icon_footer_redes">
-            <a href="#">
-              <ion-icon class="face" name="logo-facebook"></ion-icon>
-            </a>
-          </div> -->
-          <!-- <div class="icon_footer_redes">
-            <a href="#">
-              <ion-icon name="logo-linkedin" class="linkedin"></ion-icon>
-            </a>
-          </div> -->
-        </div>
+      <div class="content_bottom">
+        <span>
+          Copyright &copy; 2022 IFMT. Feito por
+          <a href="">Laboratório de Pesquisa e Programação IFMT</a>
+        </span>
       </div>
-    </div>
-  </footer>
-  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
-  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
-  <script src="../js/menu-mobile.js"></script>
-  <script src="../js/dark.js"></script>
-</body>
-
+    </footer>
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"
+    ></script>
+    <script src="../js/menu-mobile.js"></script>
+    <script src="../js/dark.js"></script>
+  </body>
 </html>

@@ -1,10 +1,20 @@
 @charset "UTF-8";
 
 main{
-  background-color: #ebebeb;
-  /* padding: 20px; */
+  background-color: white;
+  padding: 20px 10vw;
+}
+.edicoes{
+  font-family: var(--fonte_titulo);
+  position: relative;
+  text-align: center;
+  font-size: 60px;
+  font-weight: 400;
+  transition: 1.3s;
+  padding: 0px 0px 15px 0px;
 }
 .container-producoes {
+  border: 1px solid rgb(173, 173, 173);
   display: flex;
   /* justify-content: center; */
   align-items: center;
@@ -13,10 +23,10 @@ main{
   min-height: 90vh;
   border-radius: 5px;
   background-color: white;
-  max-width: 900px;
+  /* max-width: 900px; */
   width: 100%;
-  margin: auto;
-  padding: 0 100px;
+  /* margin: auto; */
+  /* padding: 0 100px; */
 }
 .artigo-producoes {
   display: flex;
@@ -24,72 +34,57 @@ main{
   position: relative;
   /* margin-bottom: 300px; */
   width: 100%;
-  align-items: center;
+  /* align-items: center; */
 }
-.text{
-  text-align: justify;
-  text-indent: 50px;
-  padding: 30px;
-  flex-direction: column;
-}
-.text h2, .text p{
-  font-family: "Times New Roman", Times, serif;
-}
-.text h2{
-  font-size: 47px;
-  padding: 15px;
-  text-align: left;
-  font-family: var(--fonte_2);
-  font-weight: 600;
+.edicao{
+  height: 100%;
   width: 100%;
+  min-height: 600px;
+  padding: 30px;
+  border-bottom: 1px solid rgba(0, 0, 0, .15)
 }
-.text p{
-  font-size: 23px;
+.titulo-edicao{
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+.titulo-edicao h2{
+  font-size: 32px;
+}
+.titulo-edicao h3{
+  font-size: 16px;
+}
+.conteudo-edicao{
+  display: flex;
+  margin-top: 20px;
+  gap: 30px;
+}
+
+.image-edicao, .text-edicao{
+  /* width: 150px; */
+  height: 100%;
+}
+.image-edicao img {
+  /* height: 100%; */
+  width: 100%;
+  min-width: 200px;
+  max-width: 400px;
+}
+.text-edicao{
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+.text-edicao p{
   text-align: justify;
-  text-indent: 40px;
-  margin-top: 5px;
-  line-height: 30px;
+  text-indent: 35px;
 }
-@media (max-width: 1100px){
-  main{
-    padding: 30px;
-    padding-bottom: 0;
-  }
-  .container-producoes {
-    padding: 0 20px;
-    width: 100%;
-  }
-  .artigo-producoes{
-    padding: 0;
-  }
-  .text{
-    margin: 0;
-    padding-bottom: 20px;
-  }
-  .text h2{
-    font-size: 40px;
-  }
-  .text p{
-    font-size: 20px;
-  }
+.text-edicao strong{
+  margin-right: 5px;
 }
-@media (max-width: 750px){
-  main{
-    padding: 10px;
-    padding-bottom: 0;
-  }
+.link-edicao a{
+  color: blue;
 }
-@media (max-width: 600px){
-  .container-producoes{
-    padding: 0;
-  }
-  .text{
-    padding: 20px;
-  }
-  .text h2{
-    font-size: 35px;
-  }
-  .text p{
-    font-size: 19px;
-  }
+.link-edicao a:hover{
+  text-decoration: underline;
 }
