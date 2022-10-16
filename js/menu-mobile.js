@@ -15,8 +15,6 @@
 
 
 
-
-
 const sidebar = document.querySelector(".sidebar")
 const toggle = document.querySelector(".toggle")
 const searchBtn = document.querySelector(".search-box")
