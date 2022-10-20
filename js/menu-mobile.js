@@ -22,7 +22,6 @@ const modeSwtich = document.querySelector(".toggle-switch")
 const modeText = document.querySelector(".mode-text")
 
 
-
 toggle.addEventListener('click', () => {
     sidebar.classList.toggle("close")
 })
