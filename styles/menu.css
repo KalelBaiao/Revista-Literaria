@@ -236,13 +236,13 @@ body {
     opacity: 0;
 }
 
-.dark .menu-bar .mode i.sun {
+/* .dark .menu-bar .mode i.sun {
     opacity: 1;
 }
 
 .dark .menu-bar .mode i.moon {
     opacity: 0;
-}
+} */
 
 .menu-bar .mode .toggle-switch {
     position: absolute;

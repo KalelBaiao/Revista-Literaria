@@ -11,15 +11,14 @@
 // iconLupa.addEventListener('click', () => {
 //     const inputPesquisar = document.querySelector(".input-pesquisar")
 //     inputPesquisar.classList.toggle('hide')
-// })
+// })  
 
 
 
 const sidebar = document.querySelector(".sidebar")
 const toggle = document.querySelector(".toggle")
 const searchBtn = document.querySelector(".search-box")
-const modeSwtich = document.querySelector(".toggle-switch")
-const modeText = document.querySelector(".mode-text")
+
 
 
 toggle.addEventListener('click', () => {
@@ -30,12 +29,12 @@ searchBtn.addEventListener('click', () => {
     sidebar.classList.remove("close")
 })
 
-modeSwtich.addEventListener('click', () => {
-    document.body.classList.toggle("dark")
+// modeSwtich.addEventListener('click', () => {
+//     document.body.classList.toggle("dark")
 
-    if (document.body.classList.contains("dark")) {
-        modeText.innerText = "Ligth Mode"
-    }else{
-        modeText.innerText = "Dark Mode"
-    }
-})
+//     if (document.body.classList.contains("dark")) {
+//         modeText.innerText = "Ligth Mode"
+//     }else{
+//         modeText.innerText = "Dark Mode"
+//     }
+// })
