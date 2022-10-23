@@ -21,6 +21,7 @@ const searchBtn = document.querySelector(".search-box")
 
 
 
+
 toggle.addEventListener('click', () => {
     sidebar.classList.toggle("close")
 })
