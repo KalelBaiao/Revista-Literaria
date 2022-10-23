@@ -1,7 +1,7 @@
 // import { initializeApp } from 'firebase/app'
 // import { getStorage, ref, uploadBytesResumable } from 'firebase/storage'
 import { initializeApp } from "https://www.gstatic.com/firebasejs/9.4.0/firebase-app.js";
-import { getStorage, ref, uploadBytesResumable} from "https://www.gstatic.com/firebasejs/9.4.0/firebase-storage.js";
+import { getStorage, ref, uploadBytesResumable } from "https://www.gstatic.com/firebasejs/9.4.0/firebase-storage.js";
 
 // const form = document.querySelector(".form-contato")
 
@@ -27,17 +27,16 @@ form.addEventListener("submit", (e) => {
 
     const storageRef = ref(storage, `Submissões/${file.name}/${file}`)
     uploadBytesResumable(storageRef, file)
-    .then(() => {
-        console.log("oi")
-    }).catch((error) => {
-        console.log(error)
-    })
-    const name = document.getElementById("input-name")
-    name.value = ''
-    const email = document.getElementById("input-email")
-    email.value = ''
-    const arquivo = document.getElementById("input-arquivo")
-    arquivo.value = ''
-    const btnSubimit = document.getElementById("envio")
-    btnSubimit.innerText = "ENVIADO COM SUCESSO!!!"
+        .then(() => {
+            const name = document.getElementById("input-name")
+            name.value = ''
+            const email = document.getElementById("input-email")
+            email.value = ''
+            const arquivo = document.getElementById("input-arquivo")
+            arquivo.value = ''
+            const btnSubimit = document.getElementById("envio")
+            btnSubimit.innerText = "ENVIADO COM SUCESSO!!!"
+        }).catch((error) => {
+            console.log(error)
+        })
 })
