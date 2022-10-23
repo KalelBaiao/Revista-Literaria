@@ -143,9 +143,7 @@
     <section class="container-contato">
       <article class="artigo-contato">
         <h1>Formulário de Contato</h1>
-        <form action="https://formsubmit.co/" method="POST" class="form-contato">
-          <input type="hidden" name="_captcha" value="false">
-          <input type="hidden" name="_next" value="false">
+        <form method="post" class="form-contato">
           <label for="name">Nome</label>
           <input type="text" name="name" id="name" required>
           <label for="email">E-mail</label>
@@ -153,7 +151,7 @@
           <!-- <label for="message">Mensagem</label>
             <textarea name="message" id="message" placeholder="Escreva aqui"></textarea> -->
           <label for="arquivo">Arquivo</label>
-          <input type="file" name="arquivo" id="arquivo" required>
+          <input type="file" name="arquivo" id="arquivo" class="file" required>
           <button type="submit">Enviar</button>
         </form>
       </article>
@@ -202,6 +200,8 @@
   <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
   <script src="../js/menu-mobile.js"></script>
   <script src="../js/dark.js"></script>
+  <script src="../js/index.js" type="module"></script>
+  
 </body>
 
 </html>
