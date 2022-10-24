@@ -35,6 +35,7 @@ const firestore = getFirestore(fireapp)
 
 form.addEventListener("submit", async (e) => {
     e.preventDefault()
+    btnSubimit.innerText = "*CARREGANDO*"
     const file = document.querySelector(".file").files[0]
 
     const storageRef = await ref(storage, `Submissões/${file.name}/${file}`)
