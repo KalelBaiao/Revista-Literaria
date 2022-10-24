@@ -16,6 +16,11 @@
   --cor01: #000000; 
   --cor02: white;
   --cor03: #add8e6;
+  --azul01: #D6E0EB;
+  --azul02: #A4BAD1;
+  --azul03: #43627F;
+  --azul04: #0D2A4A;
+  --azul05: #55a3e7;
 }
 .dark{
   --cor01: whitesmoke;
@@ -47,8 +52,8 @@ body {
   height: 50px;
 }
 .hed {
-  width: 100%;
-  background-color: #9fc3de;;
+  width: 100vw;
+  background-color: #55a3e7;
   top: 0;
   display: flex;
   height: 50px;
@@ -59,7 +64,7 @@ body {
   justify-content: space-evenly;
   position: fixed;
 
-}
+ }
 .menu {
   width: 100%;
   top: 0;
@@ -71,15 +76,14 @@ body {
   /* padding: 0% 5%; */
   justify-content: space-evenly;
 
-}
+} 
 .logo {
   font-family: var(--fonte02);
   font-size: 35px;
   font-weight: 500;
   letter-spacing: 1px;
   font-style: italic;
-  /* text-transform: uppercase; */
-
+  text-transform: uppercase; 
   width: 50px;
   display: flex;
   align-items: center;
@@ -91,22 +95,27 @@ body {
 }
 .menu_items {
   display: flex;
-  font-family: var(--fonte03);
-  gap: 35px;
-  font-size: 18px;
+  font-family: var(--fonte_titulo);
+  gap: 75px;
+  font-size: 1em;
   z-index: 2;
   font-weight: bolder;
   /* text-transform: uppercase; */
-  
 }
+.dnav{
+  width: 100%;
+}
+
 .menu_items a:hover,
 .pesquisar a:hover {
+  color: rgb(255, 255, 255);
   transition-duration: 0.4s;
-  /* font-weight: 600; */
-  text-shadow: 1px 0px 0px rgba(0, 0, 0, 0.8);
+  border-radius: 5px;
 }
+
 .items {
   font-weight: 500;
+  color: white;
 }
 .pesquisar {
   position: relative;
@@ -151,6 +160,10 @@ main {
   align-items: center;
   justify-content: center;
   flex-direction: column;
+}
+.container-principal{
+  padding-bottom: 80px;
+  position: relative;
 }
 .artigo-principal {
   display: flex;
@@ -227,9 +240,21 @@ h2 {
   height: 100px;
 }
 
+.contato-principal{
+  position: absolute;
+  bottom: 20px;
+  right: 70px;
+  background-color: var(--azul05);
+  padding: 6px 25px;
+  border-radius: 20px;
+  color: whitesmoke;
+}
+
+
 .quem-somos-nos{
   background-color:  #ebebeb;
-
+  padding: 10% 0;
+  min-height: 600px;
 }
 
 .btn-mobile {
@@ -237,141 +262,6 @@ h2 {
   padding: 5px;
   position: absolute;
 }
-
-@media (max-width: 1200px) {
-  .btn-mobile {
-    position: absolute;
-    display: block;
-    z-index: 3;
-  }
-  /* .menu_items {
-    display: block;
-    position: fixed;
-    width: 100vw;
-    top: 0px;
-    left: 0px;
-    background-color: rgba(30, 31, 34, 0.9);
-    height: 0px;
-    transition: 0.7s ease-in-out;
-    text-align: center;
-    visibility: 0;
-    overflow: hidden;
-    z-index: 2;
-  }
-  .Dnav.active .menu_items {
-    visibility: 1;
-    height: 100vh;
-  } */
-  .menu_items {
-    display: block;
-    position: fixed;
-    width: 0px;
-    top: 0px;
-    right: 0px;
-    background-color: rgba(30, 31, 34, 0.9);
-    height: 100vh;
-    transition: 0.5s ease-in-out;
-    overflow-y: hidden;
-    z-index: 2;
-    text-align: center;
-    color: white;
-  }
-  .menu_items a:hover {
-    color: #87cefacc;
-    transition: 0.5s;
-  }
-  .Dnav.active .menu_items {
-    width: 100%;
-    overflow-y: auto;
-  }
-  .hed.active .btn-mobile span {
-    background-color: white;
-  }
-  .menu_items li {
-    padding-top: 30px;
-  }
-  .menu_items li:nth-child(1) {
-    padding-top: 150px;
-  }
-  .btn-mobile {
-    display: flex;
-    position: relative;
-    padding: 5px 10x;
-    font-size: 15px;
-    border: none;
-    background: none;
-    cursor: pointer;
-    height: 22px;
-    width: 30px;
-  }
-  .btn-mobile span {
-    position: absolute;
-    display: block;
-    height: 3px;
-    width: 100%;
-    border-radius: 30px;
-    background-color: var(--cor01);
-    transition: 0.25s ease-in-out;
-  }
-  .btn-mobile span:nth-child(1) {
-    top: 0;
-  }
-  .btn-mobile span:nth-child(2) {
-    top: 8px;
-  }
-  .btn-mobile span:nth-child(3) {
-    top: 16px;
-  }
-  .hed.active .btn-mobile span:nth-child(1) {
-    transform: rotate(-135deg);
-    top: 8px;
-  }
-  .hed.active .btn-mobile span:nth-child(2) {
-    display: none;
-  }
-  .hed.active .btn-mobile span:nth-child(3) {
-    transform: rotate(135deg);
-    top: 8px;
-  }
-  .container-imagem {
-    height: auto;
-    padding-bottom: 200px;
-  }
-  .imagem img {
-    width: 60%;
-  }
-  .text {
-    max-width: 600px;
-    margin: 0px 40px;
-  }
-  .artigo-principal {
-    flex-direction: column;
-    height: 100%;
-  }
-  .menu {
-    position: relative;
-    justify-content: space-between;
-  }
-  .hed {
-    padding: 0% 15%;
-  }
-  .pesquisar{
-    display: none;
-  }
-  .text{
-    align-items: center;
-  }
-  .text h2{
-    font-size: 2em;
-  }
-  .text h1{
-    font-size: 6em;
-  }
-  .text-mensage{
-    height: 30px;
-  }
-}
-
 
 .btn-dark{
   position: absolute;
@@ -420,10 +310,6 @@ h2 {
   height: 14px;
 }
 
-
-
-
-
 .footer{
   font-family: 'Poppins', sans-serif;
   
@@ -433,7 +319,6 @@ h2 {
 .footer h2{
   font-family: 'Poppins', sans-serif;
 }
-
 
 .footer{
   width: 100%;
@@ -488,18 +373,15 @@ h2 {
   text-align: center;
 }
 
-
-
 .quem-somos-nos#paralax{
   background-image: url(../img/background-estanteDeLivros.jfif);
   background-size: cover;
   background-attachment: fixed;
   background-position: center;
-  
 }
 .note-block{
-  padding: 15px 30px;
-  min-height: 80vh;
+  padding: 50px;
+  min-height: 100%;
   width: 80%;
   max-width: 800px;
   margin: 20px;

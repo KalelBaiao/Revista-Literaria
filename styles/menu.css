@@ -15,7 +15,7 @@
     --body-color: #e4e9f7;
     --sidebar-color: #fff;
     /* --primary-color: #695cfe; */
-    --primary-color: #7b84ff;
+    --primary-color: #55a3e7;
     --primary-color-light: #f6f5ff;
     --toggle-color: #ddd;
     --text-color: #2e2e2e;
@@ -29,7 +29,7 @@
 body {
     transition: var(--tran-05);
     font-family: 'Poppins', sans-serif;
-    width: calc(100vw - 105px);
+    width: 100vw;
     position: absolute;
     right: 0; 
 }
@@ -296,14 +296,14 @@ body {
 }
 
 
-@media (max-width: 600px) {
-    /* .sidebar {
+/*@media (max-width: 600px) {
+      .sidebar {
         display: block;
-    } */
+    } 
 
-    /* .menu-fixed {
+     .menu-fixed {
         display: none;
-    } */
+    } 
 
     body {
         width: calc(100vw - 25px);
@@ -324,5 +324,4 @@ body {
     }
     .sidebar.close .text-menu {
         opacity: 0;
-    }
-}
+    } */
