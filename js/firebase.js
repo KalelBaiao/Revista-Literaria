@@ -2,7 +2,7 @@
 // import { getStorage, ref, uploadBytesResumable } from 'firebase/storage'
 import { initializeApp } from "https://www.gstatic.com/firebasejs/9.4.0/firebase-app.js"
 import { getStorage, ref, uploadBytesResumable } from "https://www.gstatic.com/firebasejs/9.4.0/firebase-storage.js"
-import { getFirestore, collection, addDoc, setDoc, doc } from "https://www.gstatic.com/firebasejs/9.4.0/firebase-firestore.js"
+import { getFirestore, collection, addDoc } from "https://www.gstatic.com/firebasejs/9.4.0/firebase-firestore.js"
 
 // const form = document.querySelector(".form-contato")
 
