@@ -2,6 +2,7 @@
 // import { getStorage, ref, uploadBytesResumable } from 'firebase/storage'
 import { initializeApp } from "https://www.gstatic.com/firebasejs/9.4.0/firebase-app.js"
 import { getStorage, ref, uploadBytesResumable } from "https://www.gstatic.com/firebasejs/9.4.0/firebase-storage.js"
+import { getFirestore, collection, addDoc, setDoc, doc } from "https://www.gstatic.com/firebasejs/9.4.0/firebase-firestore.js"
 
 // const form = document.querySelector(".form-contato")
 
@@ -26,6 +27,10 @@ const btnSubimit = document.getElementById("envio")
 const app = initializeApp(firebaseApp)
 const form = document.querySelector(".form-contato")
 const storage = getStorage(app)
+
+const fireapp = initializeApp(firebaseApp)
+const firestore = getFirestore(fireapp)
+
 // console.log(storage);
 
 form.addEventListener("submit", async (e) => {
@@ -42,29 +47,6 @@ form.addEventListener("submit", async (e) => {
         }).catch((error) => {
             console.log(error)
         })
-})
-
-
-
-import { getFirestore, collection, addDoc, setDoc, doc } from "https://www.gstatic.com/firebasejs/9.4.0/firebase-firestore.js"
-
-const firebaseConfig = {
-    apiKey: "AIzaSyCCEFGTE5Cy7dHWpoEV-L-vbaar-kMbD_c",
-    authDomain: "revista-literatus.firebaseapp.com",
-    projectId: "revista-literatus",
-    storageBucket: "revista-literatus.appspot.com",
-    messagingSenderId: "637824781668",
-    appId: "1:637824781668:web:7f4c8126a8a22436303e71",
-    measurementId: "G-FGCTN6KKW0"
-}
-
-const fireapp = initializeApp(firebaseConfig)
-const firestore = getFirestore(fireapp)
-
-form.addEventListener("submit", async (e) => {
-    e.preventDefault()
-
-    const file = document.querySelector(".file").files[0]
 
     try {
         // setDoc(doc(firestore, "users", "new-user"), data)
