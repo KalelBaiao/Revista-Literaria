@@ -87,6 +87,9 @@ body {
 .sidebar.close .text-menu, .sidebar.close .search-box input {
     opacity: 0;
 }
+.sidebar.close .menu-bar span{
+    display: none;
+}
 
 .header-text {
     display: flex;
