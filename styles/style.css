@@ -218,8 +218,7 @@ main {
   /* margin-bottom: 300px; */
   /* gap: 30px; */
 }
-.text-titulo h1,
-h2 {
+.text-titulo h1, .text-titulo h2 {
   font-family: 'Times New Roman', Times, serif;
   text-align: left;
 }

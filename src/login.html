@@ -1,104 +1,102 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contato</title>
+    <link rel="stylesheet" href="../styles/style.css" />
+    <link rel="stylesheet" href="../styles/menu.css" />
+    <link rel="stylesheet" href="../styles/login.css" />
 
-<head>
-  <meta charset="UTF-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Contato</title>
-  <link rel="stylesheet" href="../styles/style.css" />
-  <link rel="stylesheet" href="../styles/menu.css">
-  <link rel="stylesheet" href="../styles/contato.css">
-  <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
-  <link rel="shortcut icon" href="../img/icons8-e-book-48.png" type="image/x-icon">
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+    <link
+      rel="shortcut icon"
+      href="../img/icons8-e-book-48.png"
+      type="image/x-icon"
+    />
 
-  <!-- <script src="https://www.gstatic.com/firebasejs/ui/6.0.1/firebase-ui-auth.js"></script>
+    <!-- <script src="https://www.gstatic.com/firebasejs/ui/6.0.1/firebase-ui-auth.js"></script>
   <link type="text/css" rel="stylesheet" href="https://www.gstatic.com/firebasejs/ui/6.0.1/firebase-ui-auth.css" /> -->
-</head>
+  </head>
 
-<body>
+  <body>
+    <nav class="sidebar close">
+      <header>
+        <div class="image-text">
+          <span class="image">
+            <img src="../img/icons8-e-book-48.png" alt="Logo Literatus" />
+          </span>
 
-  <nav class="sidebar close">
-    <header>
-      <div class="image-text">
-        <span class="image">
-          <img src="../img/icons8-e-book-48.png" alt="Logo Literatus">
-        </span>
+          <div class="text-menu header-text">
+            <h2>Resvista</h2>
+            <h1>Literatus</h1>
+          </div>
+        </div>
+        <i class="bx bx-chevron-right toggle"></i>
+      </header>
 
-        <div class="text-menu header-text">
-          <h2>Resvista</h2>
-          <h1>Literatus</h1>
+      <div class="menu-bar">
+        <div class="menu-mobile">
+          <li class="search-box">
+            <i class="bx bx-search-alt icon"></i>
+            <input type="text" placeholder="Pesquisar" />
+          </li>
+          <ul class="menu-links">
+            <li class="nav-link">
+              <a href="index.html">
+                <i class="bx bx-home-alt icon"></i>
+                <span class="text-menu nav-text">Inicio</span>
+              </a>
+            </li>
+            <li class="nav-link">
+              <a href="integrantes.html">
+                <i class="bx bx-group icon"></i>
+                <span class="text-menu nav-text">Integrantes</span>
+              </a>
+            </li>
+            <li class="nav-link">
+              <a href="edicoes.html">
+                <i class="bx bx-book-bookmark icon"></i>
+                <span class="text-menu nav-text">Edições</span>
+              </a>
+            </li>
+            <li class="nav-link">
+              <a href="login.html">
+                <i class="bx bx-log-in icon"></i>
+                <span class="text-menu nav-text">login</span>
+              </a>
+            </li>
+          </ul>
+        </div>
+
+        <div class="button-content">
+          <li class="">
+            <a href="#">
+              <i class="bx bx-cog icon"></i>
+              <span class="text-menu nav-text">Configurações</span>
+            </a>
+          </li>
+
+          <li class="mode">
+            <div class="moon-sun">
+              <i class="bx bx-moon icon moon"></i>
+              <i class="bx bx-sun icon sun"></i>
+            </div>
+            <span class="mode-text text-menu">Dark Mode</span>
+
+            <div class="toggle-switch">
+              <span class="switch"></span>
+            </div>
+          </li>
         </div>
       </div>
-      <i class='bx bx-chevron-right toggle'></i>
-    </header>
+    </nav>
 
-    <div class="menu-bar">
-      <div class="menu-mobile">
-        <li class="search-box">
-          <i class='bx bx-search-alt icon'></i>
-          <input type="text" placeholder="Pesquisar">
-        </li>
-        <ul class="menu-links">
-          <li class="nav-link">
-            <a href="index.html">
-              <i class='bx bx-home-alt icon'></i>
-              <span class="text-menu nav-text">Inicio</span>
-            </a>
-          </li>
-          <li class="nav-link">
-            <a href="integrantes.html">
-              <i class='bx bx-group icon'></i>
-              <span class="text-menu nav-text">Integrantes</span>
-            </a>
-          </li>
-          <li class="nav-link">
-            <a href="edicoes.html">
-              <i class='bx bx-book-bookmark icon'></i>
-              <span class="text-menu nav-text">Edições</span>
-            </a>
-          </li>
-          <li class="nav-link">
-            <a href="contato.html">
-              <i class='bx bx-envelope icon'></i>
-              <span class="text-menu nav-text">Contato</span>
-            </a>
-          </li>
-          <li class="nav-link">
-            <a href="login.html">
-              <i class='bx bx-log-in icon'></i>
-              <span class="text-menu nav-text">login</span>
-            </a>
-          </li>
-        </ul>
-      </div>
-
-      <div class="button-content">
-        <li class="">
-          <a href="#">
-            <i class='bx bx-cog icon'></i>
-            <span class="text-menu nav-text">Configurações</span>
-          </a>
-        </li>
-
-        <li class="mode">
-          <div class="moon-sun">
-            <i class='bx bx-moon icon moon'></i>
-            <i class='bx bx-sun icon sun'></i>
-          </div>
-          <span class="mode-text text-menu">Dark Mode</span>
-
-          <div class="toggle-switch">
-            <span class="switch"></span>
-          </div>
-        </li>
-      </div>
-    </div>
-  </nav>
-
-
-
-  <!-- <div class="menu-fixed">
+    <!-- <div class="menu-fixed">
 
     <header class="hed">
       <div class="menu">
@@ -148,71 +146,105 @@
       </div>
     </header>
   </div> -->
-  <main>
-    <section class="container-contato">
-      <article class="artigo-contato">
-        <h1>Login</h1>
-        <form method="post" class="form-contato" id="form-login">
-          <label for="name">Nome</label>
-          <input type="text" name="name" id="input-name" required>
-          <label for="email">E-mail</label>
-          <input type="email" name="email" id="input-email" required>
-          <!-- <label for="message">Mensagem</label>
-            <textarea name="message" id="message" placeholder="Escreva aqui"></textarea> -->
-          <label for="arquivo">Arquivo</label>
-          <input type="file" name="arquivo" id="input-arquivo" class="file" required>
-          <button type="submit" id="envio">Enviar</button>
-        </form>
-      </article>
-    </section>
-  </main>
-  <footer class="footer">
-    <div class="content_top">
-      <div class="left_footer">
-        <div class="text_footer">
-          <h1>Revista Literatus</h1>
-          <h2>Lorem ipsum dolor sit amet consectetur adipisicing elit.</h2>
+    <main>
+      <section class="container-fire">
+        <article class="container-cadastro">
+          <div class="image-login"><img src="../img/icons8-e-book-48.png" /></div>
+          <h1>Cadastro</h1>
+          <h2 id="sub-titulo">Cadastre-se e Publique suas obras!</h2>
+          <form method="post" class="form-cadastro">
+            <label for="nome">Nome</label>
+            <input type="text" name="nome" id="input-nome" required placeholder="Informe seu nome">
+            <label for="email">E-mail</label>
+            <input type="email" name="email" id="cadastro-input-email" required placeholder="Informe seu E-mail"/>
+            <label for="senha">Senha</label>
+            <input type="password" name="senha" id="cadastro-input-senha" required placeholder="Informe sua senha">
+            <button type="submit" id="cadastro-envio" class="Cenvio">Cadastrar-se</button>
+          </form>
+        </article>
+        <article class="container-login none">
+          <div class="image-login"><img src="../img/icons8-e-book-48.png" /></div>
+          <h1>Login</h1>
+          <h2 id="sub-titulo">Façã Login e Publique suas obras!</h2>
+          <form method="post" class="form-login">
+            <label for="email">E-mail</label>
+            <input type="email" name="email" id="login-input-email" required placeholder="Informe seu E-mail"/>
+            <label for="senha">Senha</label>
+            <input type="password" name="senha" id="input-senha" required placeholder="Informe sua senha">
+            <button type="submit" id="login-envio"  class="Cenvio">Entrar</button>
+          </form>
+          <div class="btn-cadastrar"><a href="#" class="cadastrar">Click para criar seu cadastro</a></div>
+        </article>
+        <article class="container-contato none">
+          <div class="image-login"><img src="../img/icons8-e-book-48.png" /></div>
+            <h1>Submissão de Arquivos</h1>
+            <form method="post" class="form-contato">
+              <label for="name">Nome</label>
+              <input type="text" name="name" id="input-name" required>
+              <label for="email">E-mail</label>
+              <input type="email" name="email" id="contato-input-email" required>
+              <!-- <label for="message">Mensagem</label>
+                <textarea name="message" id="message" placeholder="Escreva aqui"></textarea> -->
+              <label for="arquivo">Arquivo</label>
+              <input type="file" name="arquivo" id="input-arquivo" class="file" required>
+              <button type="submit" id="contato-envio">Enviar</button>
+            </form>
+            <div class="btn-deslogar"><a href="#" id="deslogar">Click para deslogar</a></div>
+        </article>
+      </section>
+    </main>
+    <footer class="footer">
+      <div class="content_top">
+        <div class="left_footer">
+          <div class="text_footer">
+            <h1>Revista Literatus</h1>
+            <h2>Lorem ipsum dolor sit amet consectetur adipisicing elit.</h2>
+          </div>
+
+          <div class="logos_footer">
+            <a href="">
+              <img src="./Components/img/rain.png" alt="" />
+              <!-- Logo 1 -->
+            </a>
+            <a href="">
+              <img src="./Components/img/sunny.png" alt="" />
+              <!-- Logo 2 -->
+            </a>
+          </div>
         </div>
 
-        <div class="logos_footer">
-          <a href="">
-            <img src="./Components/img/rain.png" alt="" />
-            <!-- Logo 1 -->
-          </a>
-          <a href="">
-            <img src="./Components/img/sunny.png" alt="" />
-            <!-- Logo 2 -->
-          </a>
+        <div class="infos_footer">
+          <div class="title_info_footer">
+            <h1>Informações:</h1>
+          </div>
+          <div class="item_footer">
+            Contact: ifmt@gmail.com
+          </div>
+          <div class="item_footer">
+            Localization: Rua Primvera do Oeste da Discordancia
+          </div>
         </div>
       </div>
-
-      <div class="infos_footer">
-        <div class="title_info_footer">
-          <h1>Informações:</h1>
-        </div>
-        <div class="item_footer">
-          Contact: ifmt@gmail.com
-        </div>
-        <div class="item_footer">
-          Localization: Rua Primvera do Oeste da Discordancia
-        </div>
+      <div class="content_bottom">
+        <span>
+          Copyright &copy; 2022 IFMT. Feito por
+          <a href="">Laboratório de Pesquisa e Programação IFMT</a>
+        </span>
       </div>
-    </div>
-    <div class="content_bottom">
-      <span>
-        Copyright &copy; 2022 IFMT. Feito por
-        <a href="">Laboratório de Pesquisa e Programação IFMT</a>
-      </span>
-    </div>
-  </footer>
-  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
-  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
-  <script src="../js/menu-mobile.js"></script>
-  <script src="../js/dark.js"></script>
-  <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-app.js"></script>
-  <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-firestore.js"></script>
-  <script src="../js/firebase.js" type="module"></script>
-
-</body>
-
+    </footer>
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"
+    ></script>
+    <script src="../js/menu-mobile.js"></script>
+    <script src="../js/dark.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-firestore.js"></script>
+    <!-- <script src="../js/firebase.js" type="module"></script> -->
+    <script src="../js/firebase-login.js" type="module"></script>
+  </body>
 </html>
