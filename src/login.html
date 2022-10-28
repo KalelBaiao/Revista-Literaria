@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contato</title>
+  <link rel="stylesheet" href="../styles/style.css" />
+  <link rel="stylesheet" href="../styles/menu.css">
+  <link rel="stylesheet" href="../styles/contato.css">
+  <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+  <link rel="shortcut icon" href="../img/icons8-e-book-48.png" type="image/x-icon">
+
+  <!-- <script src="https://www.gstatic.com/firebasejs/ui/6.0.1/firebase-ui-auth.js"></script>
+  <link type="text/css" rel="stylesheet" href="https://www.gstatic.com/firebasejs/ui/6.0.1/firebase-ui-auth.css" /> -->
+</head>
+
+<body>
+
+  <nav class="sidebar close">
+    <header>
+      <div class="image-text">
+        <span class="image">
+          <img src="../img/icons8-e-book-48.png" alt="Logo Literatus">
+        </span>
+
+        <div class="text-menu header-text">
+          <h2>Resvista</h2>
+          <h1>Literatus</h1>
+        </div>
+      </div>
+      <i class='bx bx-chevron-right toggle'></i>
+    </header>
+
+    <div class="menu-bar">
+      <div class="menu-mobile">
+        <li class="search-box">
+          <i class='bx bx-search-alt icon'></i>
+          <input type="text" placeholder="Pesquisar">
+        </li>
+        <ul class="menu-links">
+          <li class="nav-link">
+            <a href="index.html">
+              <i class='bx bx-home-alt icon'></i>
+              <span class="text-menu nav-text">Inicio</span>
+            </a>
+          </li>
+          <li class="nav-link">
+            <a href="integrantes.html">
+              <i class='bx bx-group icon'></i>
+              <span class="text-menu nav-text">Integrantes</span>
+            </a>
+          </li>
+          <li class="nav-link">
+            <a href="edicoes.html">
+              <i class='bx bx-book-bookmark icon'></i>
+              <span class="text-menu nav-text">Edições</span>
+            </a>
+          </li>
+          <li class="nav-link">
+            <a href="contato.html">
+              <i class='bx bx-envelope icon'></i>
+              <span class="text-menu nav-text">Contato</span>
+            </a>
+          </li>
+          <li class="nav-link">
+            <a href="login.html">
+              <i class='bx bx-log-in icon'></i>
+              <span class="text-menu nav-text">login</span>
+            </a>
+          </li>
+        </ul>
+      </div>
+
+      <div class="button-content">
+        <li class="">
+          <a href="#">
+            <i class='bx bx-cog icon'></i>
+            <span class="text-menu nav-text">Configurações</span>
+          </a>
+        </li>
+
+        <li class="mode">
+          <div class="moon-sun">
+            <i class='bx bx-moon icon moon'></i>
+            <i class='bx bx-sun icon sun'></i>
+          </div>
+          <span class="mode-text text-menu">Dark Mode</span>
+
+          <div class="toggle-switch">
+            <span class="switch"></span>
+          </div>
+        </li>
+      </div>
+    </div>
+  </nav>
+
+
+
+  <!-- <div class="menu-fixed">
+
+    <header class="hed">
+      <div class="menu">
+
+        <div class="logo">
+          <img src="../img/literatura (2).png" alt="imagem da logo">
+           <a href="#" class="logo">Literatus</a>
+        </div>
+        <nav class="Dnav">
+          <ul class="menu_items">
+            <li><a href="index.html" class="items">Início</a></li>
+            <li><a href="integrantes.html" class="items">Integrantes</a></li>
+            <li>
+              <a href="edicoes.html" class="items">Edições</a>
+            </li>
+            <li><a href="contato.html" class="items">Contato</a></li>
+          </ul>
+        </nav>
+        <div class="pesquisar">
+          <div class="icon-lupa">
+            <a href="#" class="lupa">
+              <ion-icon name="search-outline" class="ico"></ion-icon>
+            </a>
+          </div>
+          <div class="input-pesquisar hide">
+            <input type="text" placeholder="Pesquisar" />
+          </div>
+        </div>
+      </div>
+
+      <div class="menu-mobile">
+        <button class="btn-mobile">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+
+      <div class="btn-dark">
+        <input type="checkbox" class="checkbox" id="chk">
+
+        <label class="label" for="chk">
+          <ion-icon name="moon-outline" class=" fas fa-lua"></ion-icon>
+          <ion-icon name="sunny-outline" class="fas fa-sol"></ion-icon>
+          <div class="bola"></div>
+        </label>
+      </div>
+    </header>
+  </div> -->
+  <main>
+    <section class="container-contato">
+      <article class="artigo-contato">
+        <h1>Login</h1>
+        <form method="post" class="form-contato" id="form-login">
+          <label for="name">Nome</label>
+          <input type="text" name="name" id="input-name" required>
+          <label for="email">E-mail</label>
+          <input type="email" name="email" id="input-email" required>
+          <!-- <label for="message">Mensagem</label>
+            <textarea name="message" id="message" placeholder="Escreva aqui"></textarea> -->
+          <label for="arquivo">Arquivo</label>
+          <input type="file" name="arquivo" id="input-arquivo" class="file" required>
+          <button type="submit" id="envio">Enviar</button>
+        </form>
+      </article>
+    </section>
+  </main>
+  <footer class="footer">
+    <div class="content_top">
+      <div class="left_footer">
+        <div class="text_footer">
+          <h1>Revista Literatus</h1>
+          <h2>Lorem ipsum dolor sit amet consectetur adipisicing elit.</h2>
+        </div>
+
+        <div class="logos_footer">
+          <a href="">
+            <img src="./Components/img/rain.png" alt="" />
+            <!-- Logo 1 -->
+          </a>
+          <a href="">
+            <img src="./Components/img/sunny.png" alt="" />
+            <!-- Logo 2 -->
+          </a>
+        </div>
+      </div>
+
+      <div class="infos_footer">
+        <div class="title_info_footer">
+          <h1>Informações:</h1>
+        </div>
+        <div class="item_footer">
+          Contact: ifmt@gmail.com
+        </div>
+        <div class="item_footer">
+          Localization: Rua Primvera do Oeste da Discordancia
+        </div>
+      </div>
+    </div>
+    <div class="content_bottom">
+      <span>
+        Copyright &copy; 2022 IFMT. Feito por
+        <a href="">Laboratório de Pesquisa e Programação IFMT</a>
+      </span>
+    </div>
+  </footer>
+  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+  <script src="../js/menu-mobile.js"></script>
+  <script src="../js/dark.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-firestore.js"></script>
+  <script src="../js/firebase.js" type="module"></script>
+
+</body>
+
+</html>

@@ -33,31 +33,58 @@ const firestore = getFirestore(fireapp)
 
 // console.log(storage);
 
+// form.addEventListener("submit", async (e) => {
+//     e.preventDefault()
+//     btnSubimit.innerText = "*CARREGANDO*"
+//     const file = document.querySelector(".file").files[0]
+
+//     const storageRef = await ref(storage, `Submissões/${file.name}/${file}`)
+//     uploadBytesResumable(storageRef, file)
+//         .then(() => {
+//             name.value = ''
+//             email.value = ''
+//             arquivo.value = ''
+//             btnSubimit.innerText = "ENVIADO COM SUCESSO!!!"
+//         }).catch((error) => {
+//             console.log(error)
+//         })
+
+//     try {
+//         // setDoc(doc(firestore, "users", "new-user"), data)
+//         const docRef = await addDoc(collection(firestore, "users"), {
+//             nome: `${name.value}`,
+//             email: `${email.value}`,
+//             arquivo: `${file.name}`
+//         })
+//         console.log("Document written with ID: ", docRef.id)
+//     } catch (e) {
+//         console.error("Error adding document: ", e)
+//     }
+// })
+
+
+// import { firebaseui } from "https://www.gstatic.com/firebasejs/ui/6.0.1/firebase-ui-auth.js"
+import { getAuth, createUserWithEmailAndPassword } from "https://www.gstatic.com/firebasejs/9.4.0/firebase-auth.js"
+const auth = getAuth(app)
+
 form.addEventListener("submit", async (e) => {
     e.preventDefault()
-    btnSubimit.innerText = "*CARREGANDO*"
-    const file = document.querySelector(".file").files[0]
+    var password = '123456'
+    const email = document.getElementById("input-email").value
 
-    const storageRef = await ref(storage, `Submissões/${file.name}/${file}`)
-    uploadBytesResumable(storageRef, file)
-        .then(() => {
-            name.value = ''
-            email.value = ''
-            arquivo.value = ''
-            btnSubimit.innerText = "ENVIADO COM SUCESSO!!!"
-        }).catch((error) => {
-            console.log(error)
+    createUserWithEmailAndPassword(auth, email, password)
+        .then((userCredential) => {
+            // Signed in
+            const user = userCredential.user;
+            console.log(user)
+            // ...
+        })
+        .catch((error) => {
+            const errorCode = error.code;
+            const errorMessage = error.message;
+            console.log(errorCode, errorMessage)
+            // ..
         })
 
-    try {
-        // setDoc(doc(firestore, "users", "new-user"), data)
-        const docRef = await addDoc(collection(firestore, "users"), {
-            nome: `${name.value}`,
-            email: `${email.value}`,
-            arquivo: `${file.name}`
-        })
-        console.log("Document written with ID: ", docRef.id)
-    } catch (e) {
-        console.error("Error adding document: ", e)
-    }
+
 })
