@@ -29,29 +29,6 @@ const storage = getStorage(app)
 const firestore = getFirestore(app)
 const auth = getAuth(app)
 
-// cadatra o usuario
-formCadastro.addEventListener("submit", async (e) => {
-    e.preventDefault()
-    const nome = document.getElementById("input-nome").value
-    const email = document.getElementById("cadastro-input-email").value
-    const senha = document.getElementById("cadastro-input-senha").value
-
-    createUserWithEmailAndPassword(auth, email, senha)
-        .then((userCredential) => {
-            const user = userCredential.user;
-            console.log(user)
-        })
-        .catch((error) => {
-            const errorCode = error.code;
-            const errorMessage = error.message;
-            console.log(errorCode, errorMessage)
-        })
-
-
-})
-// .
-
-
 // verifica se o usuario está logado
 onAuthStateChanged(auth, (user) => {
     if (user) {
@@ -69,6 +46,40 @@ onAuthStateChanged(auth, (user) => {
         containerLogin.classList.remove('none')
         containerCadastro.classList.add('none')
     }
+})
+// .
+
+// cadatra o usuario
+formCadastro.addEventListener("submit", async (e) => {
+    e.preventDefault()
+    const nome = document.getElementById("input-nome").value
+    const email = document.getElementById("cadastro-input-email").value
+    const senha = document.getElementById("cadastro-input-senha").value
+
+    createUserWithEmailAndPassword(auth, email, senha)
+        .then((userCredential) => {
+            const user = userCredential.user;
+            console.log(user)
+
+            try {
+                const user = auth.currentUser
+                const docRef = addDoc(collection(firestore, "users", user.uid, "cadastro"), {
+                    nome: `${nome}`,
+                    email: `${email}`,
+                    senha: `${senha}`,
+                    adm: false
+                })
+                console.log("Document written with ID: ", docRef.id)
+            } catch (e) {
+                console.error("Error adding document: ", e)
+            }
+        })
+        .catch((error) => {
+            const errorCode = error.code;
+            const errorMessage = error.message;
+            console.log(errorCode, errorMessage)
+        })
+
 })
 // .
 
@@ -101,20 +112,23 @@ formContato.addEventListener("submit", async (e) => {
     const nome = document.getElementById("input-name")
     const email = document.getElementById("contato-input-email")
 
-    const storageRef = await ref(storage, `Submissões/${file.name}/${file}`)
+    const user = auth.currentUser
+
+    const storageRef = await ref(storage, `Submissões/${user.uid}/${file.name}/${file}`)
     uploadBytesResumable(storageRef, file)
         .then(() => {
             nome.value = ''
             email.value = ''
             file.value = ''
             btnSubmit.innerText = "ENVIADO COM SUCESSO!!!"
+           
         }).catch((error) => {
             console.log(error)
         })
 
     try {
         // setDoc(doc(firestore, "users", "new-user"), data)
-        const docRef = await addDoc(collection(firestore, "users"), {
+        const docRef = await addDoc(collection(firestore, "users", user.uid, "PDFs"), {
             nome: `${nome.value}`,
             email: `${email.value}`,
             arquivo: `${file.name}`
