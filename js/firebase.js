@@ -34,17 +34,18 @@ const verificADM = async ({ uid }) => {
         console.log(doc.id, " => ", doc.data());
         const usuario = doc.data()
         if (usuario.adm == true) {
-            console.log(`${usuario.nome} é um Administrador`)
-
             const menu = document.querySelector(".menu-mobile")
+            const menuPc = document.querySelector(".menu_items")
             const li = document.createElement("li")
+            const liPc = document.createElement("li")
             li.innerHTML = `
             <a href="adm.html">
                 <i class="bx bx-key icon"></i>
                 <span class="text-menu nav-text">ADM</span>
             </a> `
+            liPc.innerHTML = `<a href="adm.html" class="items">ADM</a>`
             menu.appendChild(li)
-
+            menuPc.appendChild(liPc)
         } else {
             console.log(`${usuario.nome} não é um Administrador`);
         }
