@@ -30,6 +30,7 @@ const firestore = getFirestore(app)
 const auth = getAuth(app)
 
 
+// verifica se o usuario está logado
 onAuthStateChanged(auth, (user) => {
     if (user) {
         containerContato.classList.remove('none')

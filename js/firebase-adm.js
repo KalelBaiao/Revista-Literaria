@@ -47,6 +47,7 @@ const verificADM = async ({ uid }) => {
             </a> `
             menu.appendChild(li)
 
+            buscaDados(uid)
         } else {
             console.log(`${usuario.nome} não é um Administrador`);
         }
@@ -54,6 +55,11 @@ const verificADM = async ({ uid }) => {
 }
 // .
 
-
+const buscaDados = async (uid) => {
+    const querySnapshot = await getDocs(collection(firestore, "users"));
+    querySnapshot.forEach((doc) => {
+        console.log(doc.id, " => ", doc.data());
+    })
+}
 
 
