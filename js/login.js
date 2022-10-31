@@ -31,22 +31,48 @@ const auth = getAuth(app)
 
 
 // verifica se o usuario está logado
-onAuthStateChanged(auth, (user) => {
-    if (user) {
-        containerContato.classList.remove('none')
-        containerLogin.classList.add('none')
-        containerCadastro.classList.add('none')
-        const user = auth.currentUser
-        console.log(user)
+// onAuthStateChanged(auth, (user) => {
+//     if (user) {
+//         containerContato.classList.remove('none')
+//         containerLogin.classList.add('none')
+//         containerCadastro.classList.add('none')
+//         const user = auth.currentUser
+//         console.log(user)
 
-        verificADM(user)
-    } else {
-        console.log("logue, Por favor!");
-        containerContato.classList.add('none')
-        containerLogin.classList.remove('none')
-        containerCadastro.classList.add('none')
-    }
-})
+//         verificaADM(user)
+//     } else {
+//         console.log("logue, Por favor!");
+//         containerContato.classList.add('none')
+//         containerLogin.classList.remove('none')
+//         containerCadastro.classList.add('none')
+//     }
+// })
+// .
+
+// verifica se o usuario é um Administrador
+// const verificaADM = async ({ uid }) => {
+//     const querySnapshot = await getDocs(collection(firestore, "users", uid, "cadastro"));
+//     querySnapshot.forEach((doc) => {
+//         console.log(doc.id, " => ", doc.data());
+//         const usuario = doc.data()
+//         if (usuario.adm == true) {
+//             console.log(`${usuario.nome} é um Administrador`)
+
+//             const menu = document.querySelector(".menu-mobile")
+//             const li = document.createElement("li")
+//             li.innerHTML = `
+//             <a href="adm.html">
+//                 <i class="bx bx-key icon"></i>
+//                 <span class="text-menu nav-text">ADM</span>
+//             </a> `
+//             menu.appendChild(li)
+
+//             buscaDados(uid)
+//         } else {
+//             console.log(`${usuario.nome} não é um Administrador`);
+//         }
+//     })
+// }
 // .
 
 // cadatra o usuario
