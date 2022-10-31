@@ -31,22 +31,22 @@ const auth = getAuth(app)
 
 
 // verifica se o usuario está logado
-// onAuthStateChanged(auth, (user) => {
-//     if (user) {
-//         containerContato.classList.remove('none')
-//         containerLogin.classList.add('none')
-//         containerCadastro.classList.add('none')
-//         const user = auth.currentUser
-//         console.log(user)
+onAuthStateChanged(auth, (user) => {
+    if (user) {
+        containerContato.classList.remove('none')
+        containerLogin.classList.add('none')
+        containerCadastro.classList.add('none')
+        const user = auth.currentUser
+        console.log(user)
 
-//         verificaADM(user)
-//     } else {
-//         console.log("logue, Por favor!");
-//         containerContato.classList.add('none')
-//         containerLogin.classList.remove('none')
-//         containerCadastro.classList.add('none')
-//     }
-// })
+        // verificaADM(user)
+    } else {
+        console.log("logue, Por favor!");
+        containerContato.classList.add('none')
+        containerLogin.classList.remove('none')
+        containerCadastro.classList.add('none')
+    }
+})
 // .
 
 // verifica se o usuario é um Administrador

@@ -1,7 +1,7 @@
 import { initializeApp } from "https://www.gstatic.com/firebasejs/9.4.0/firebase-app.js"
-import { getAuth, createUserWithEmailAndPassword, signInWithEmailAndPassword, onAuthStateChanged, signOut } from "https://www.gstatic.com/firebasejs/9.4.0/firebase-auth.js"
-import { getStorage, ref, uploadBytesResumable, list } from "https://www.gstatic.com/firebasejs/9.4.0/firebase-storage.js"
-import { getFirestore, collection, addDoc, getDoc, doc, getDocs, query } from "https://www.gstatic.com/firebasejs/9.4.0/firebase-firestore.js"
+import { getAuth, onAuthStateChanged} from "https://www.gstatic.com/firebasejs/9.4.0/firebase-auth.js"
+import { getStorage, ref, getDownloadURL } from "https://www.gstatic.com/firebasejs/9.4.0/firebase-storage.js"
+import { getFirestore, collection, getDocs} from "https://www.gstatic.com/firebasejs/9.4.0/firebase-firestore.js"
 
 
 const firebaseApp = {
@@ -18,8 +18,6 @@ const app = initializeApp(firebaseApp)
 const storage = getStorage(app)
 const firestore = getFirestore(app)
 const auth = getAuth(app)
-
-var pessoas = {}
 
 // verifica se o usuario está logado
 onAuthStateChanged(auth, async (user) => {
@@ -39,8 +37,6 @@ const verificaADM = async ({ uid }) => {
         // console.log(doc.id, " => ", doc.data());
         const usuario = doc.data()
         if (usuario.adm == true) {
-            console.log(`${usuario.nome} é um Administrador`)
-
             const menu = document.querySelector(".menu-mobile")
             const li = document.createElement("li")
             li.innerHTML = `
@@ -62,12 +58,33 @@ const buscaDados = async () => {
     const query = await getDocs(collection(firestore, "users"));
     query.forEach(async (doc) => {
         const uid = doc.id
-        const querySnapshot = await getDocs(collection(firestore, "users", uid, "cadastro"))
-        querySnapshot.forEach((d) => {
-            pessoas = d.data()
-        })
-        console.log(pessoas);
 
+        // const querySnapshot = await getDocs(collection(firestore, "users", uid, "cadastro"))
+        // querySnapshot.forEach((d) => {
+        //     pessoas = d.data()
+        // })
+
+        const PDFsRef = await getDocs(collection(firestore, "users", uid, "PDFs"))
+        PDFsRef.forEach(async (a) => {
+            const pdf = a.data()
+
+            const storageRef = await ref(storage, `Submissões/${uid}/${pdf.arquivo}/[object File]`)
+            getDownloadURL(storageRef)
+                .then(async (url) => {
+                    const users = document.querySelector(".users")
+                    const user = document.createElement("article")
+                    user.classList.add("user")
+                    user.innerHTML = `
+                        <h2><span>Nome: </span> ${pdf.nome} </h2>
+                        <h3><span>E-mail: </span> ${pdf.email}</h3>
+                        <a href="${url}" target="_blank"><span>Arquivo: </span>${pdf.arquivo}</a>
+                    `
+                    users.appendChild(user)
+                })
+                .catch((error) => {
+                    console.log(error)
+                })
+        })
     })
 }
 
