@@ -4,10 +4,10 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Login</title>
+    <title>ADM</title>
     <link rel="stylesheet" href="../styles/style.css" />
     <link rel="stylesheet" href="../styles/menu.css" />
-    <link rel="stylesheet" href="../styles/login.css" />
+    <link rel="stylesheet" href="../styles/adm.css" />
 
     <link
       href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
@@ -147,50 +147,8 @@
     </header>
   </div> -->
     <main>
-      <section class="container-fire">
-        <article class="container-cadastro">
-          <div class="image-login"><img src="../img/icons8-e-book-48.png" /></div>
-          <h1>Cadastro</h1>
-          <h2 id="sub-titulo">Cadastre-se e Publique suas obras!</h2>
-          <form method="post" class="form-cadastro">
-            <label for="nome">Nome</label>
-            <input type="text" name="nome" id="input-nome" required placeholder="Informe seu nome">
-            <label for="email">E-mail</label>
-            <input type="email" name="email" id="cadastro-input-email" required placeholder="Informe seu E-mail"/>
-            <label for="senha">Senha</label>
-            <input type="password" name="senha" id="cadastro-input-senha" required placeholder="Informe sua senha">
-            <button type="submit" id="cadastro-envio" class="Cenvio">Cadastrar-se</button>
-          </form>
-        </article>
-        <article class="container-login none">
-          <div class="image-login"><img src="../img/icons8-e-book-48.png" /></div>
-          <h1>Login</h1>
-          <h2 id="sub-titulo">Façã Login e Publique suas obras!</h2>
-          <form method="post" class="form-login">
-            <label for="email">E-mail</label>
-            <input type="email" name="email" id="login-input-email" required placeholder="Informe seu E-mail"/>
-            <label for="senha">Senha</label>
-            <input type="password" name="senha" id="input-senha" required placeholder="Informe sua senha">
-            <button type="submit" id="login-envio"  class="Cenvio">Entrar</button>
-          </form>
-          <div class="btn-cadastrar"><a href="#" class="cadastrar">Click para criar seu cadastro</a></div>
-        </article>
-        <article class="container-contato none">
-          <div class="image-login"><img src="../img/icons8-e-book-48.png" /></div>
-            <h1>Submissão de Arquivos</h1>
-            <form method="post" class="form-contato">
-              <label for="name">Nome</label>
-              <input type="text" name="name" id="input-name" required>
-              <label for="email">E-mail</label>
-              <input type="email" name="email" id="contato-input-email" required>
-              <!-- <label for="message">Mensagem</label>
-                <textarea name="message" id="message" placeholder="Escreva aqui"></textarea> -->
-              <label for="arquivo">Arquivo</label>
-              <input type="file" name="arquivo" id="input-arquivo" class="file" required>
-              <button type="submit" id="contato-envio">Enviar</button>
-            </form>
-            <div class="btn-deslogar"><a href="#" id="deslogar">Click para deslogar</a></div>
-        </article>
+      <section>
+
       </section>
     </main>
     <footer class="footer">
@@ -245,7 +203,6 @@
     <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-app.js"></script>
     <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-firestore.js"></script>
     <!-- <script src="../js/firebase.js" type="module"></script> -->
-    <script src="../js/login.js" type="module"></script>
-    <script src="../js/firebase.js" type="module"></script>
-  </body>
+    <script src="../js/firebase-adm.js" type="module"></script>
+</body>
 </html>

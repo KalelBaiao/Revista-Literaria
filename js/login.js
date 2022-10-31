@@ -1,7 +1,7 @@
 import { initializeApp } from "https://www.gstatic.com/firebasejs/9.4.0/firebase-app.js"
 import { getAuth, createUserWithEmailAndPassword, signInWithEmailAndPassword, onAuthStateChanged, signOut } from "https://www.gstatic.com/firebasejs/9.4.0/firebase-auth.js"
 import { getStorage, ref, uploadBytesResumable } from "https://www.gstatic.com/firebasejs/9.4.0/firebase-storage.js"
-import { getFirestore, collection, addDoc } from "https://www.gstatic.com/firebasejs/9.4.0/firebase-firestore.js"
+import { getFirestore, collection, addDoc, getDoc, doc, getDocs } from "https://www.gstatic.com/firebasejs/9.4.0/firebase-firestore.js"
 
 const firebaseApp = {
     apiKey: "AIzaSyCCEFGTE5Cy7dHWpoEV-L-vbaar-kMbD_c",
@@ -29,17 +29,16 @@ const storage = getStorage(app)
 const firestore = getFirestore(app)
 const auth = getAuth(app)
 
-// verifica se o usuario está logado
+
 onAuthStateChanged(auth, (user) => {
     if (user) {
-        const user = auth.currentUser
-        const displayName = user.displayName
-        const email = user.email
-        console.log(user)
-        const uid = user.uid
         containerContato.classList.remove('none')
         containerLogin.classList.add('none')
         containerCadastro.classList.add('none')
+        const user = auth.currentUser
+        console.log(user)
+
+        verificADM(user)
     } else {
         console.log("logue, Por favor!");
         containerContato.classList.add('none')
@@ -121,7 +120,7 @@ formContato.addEventListener("submit", async (e) => {
             email.value = ''
             file.value = ''
             btnSubmit.innerText = "ENVIADO COM SUCESSO!!!"
-           
+
         }).catch((error) => {
             console.log(error)
         })
@@ -139,7 +138,6 @@ formContato.addEventListener("submit", async (e) => {
     }
 })
 // .
-
 
 
 // botoes links
