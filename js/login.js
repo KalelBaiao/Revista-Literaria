@@ -157,7 +157,8 @@ formContato.addEventListener("submit", async (e) => {
         const docRef = await addDoc(collection(firestore, "users", user.uid, "PDFs"), {
             nome: `${nome.value}`,
             email: `${email.value}`,
-            arquivo: `${file.name}`
+            arquivo: `${file.name}`,
+            uid: `${user.uid}`
         })
         console.log("Document written with ID: ", docRef.id)
     } catch (e) {
