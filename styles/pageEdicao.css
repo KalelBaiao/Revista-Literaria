@@ -1,0 +1,86 @@
+
+main{
+    padding: 20px;
+}
+
+.titulo-edicao {
+    font-family: var(--fonte_titulo);
+    position: relative;
+    text-align: center;
+    font-size: 60px;
+    font-weight: 400;
+    transition: 1.3s;
+    padding: 0px 0px 15px 0px;
+}
+.container-edicao {
+    display: flex;
+    justify-content: center;
+    height: 100%;
+    min-height: 90vh;
+    border-radius: 5px;
+    background-color: white;
+    width: 100%;
+    padding: 30px;
+    gap: 30px;
+}
+.publicacao{
+    height: 100%;
+    min-width: 300px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+.publicacao .principal{
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+.publicacao .principal img{
+    width: 100%;
+}
+.publicacao .titulo-publicacao h1{
+    position: relative;
+    font-family: var(--fonte_titulo);
+    font-size: 20px;
+    letter-spacing: 1px;
+}
+.publicacao .titulo-publicacao h1:before{
+    content: "Romance";
+    position: absolute;
+    top: -45px;
+    left: 25px;
+    width: 85px;
+    background-color: var(--azul05);
+    display: flex;
+    align-items: center;
+    /* justify-content: center; */
+    padding: 2px;
+    padding-left: 10px;
+    font-weight: 500;
+    color: white;
+    font-size: 14px;
+    border-bottom-right-radius: 100px;
+    border-top-right-radius: 8px;
+}
+.publicacao .resumo-edicao{
+    text-indent: 35px;
+    text-align: justify;
+    line-height: 20px;
+}
+.btn-vejaMais a{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 4px;
+    background-color: #121214;
+    color: white;
+    width: 80px;
+    padding: 4px;
+    transition: .5s;
+    font-family: var(--fonte_titulo);
+    border-radius: 4px;
+    letter-spacing: 1px;
+}
+.btn-vejaMais a:hover{
+    transform: scale(.95);
+}
