@@ -317,6 +317,7 @@
 @media (max-width: 600px) {
     .sidebar {
         display: block;
+        border-right: 2px solid rgba(85, 163, 231, 0.2);
     }
 
     .menu-fixed {
@@ -324,7 +325,7 @@
     }
 
     body {
-        width: calc(100vw - 25px);
+        width: calc(100vw - 32px);
     }
 
     .sidebar.close {

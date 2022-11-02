@@ -13,7 +13,7 @@
   --fonte02: "Lavishly Yours", cursive;
   --fonte02: 'Cormorant Garamond', serif;
   --fonte03: 'Cinzel', serif;
-  --cor01: #000000; 
+  --cor01: #000000;
   --cor02: white;
   --cor03: #add8e6;
   --azul01: #D6E0EB;
@@ -22,22 +22,27 @@
   --azul04: #0D2A4A;
   --azul05: #55a3e7;
 }
-.dark{
+
+.dark {
   --cor01: whitesmoke;
   --cor02: #000000;
 }
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
+
 a {
   color: inherit;
   text-decoration: none;
 }
+
 li {
   list-style: none;
 }
+
 body {
   display: flex;
   align-items: center;
@@ -45,12 +50,14 @@ body {
   flex-direction: column;
   background-color: var(--cor02);
 }
-.menu-fixed{
+
+.menu-fixed {
   width: 100%;
   display: block;
   top: 0;
   height: 50px;
 }
+
 .hed {
   width: 100vw;
   background-color: #55a3e7;
@@ -64,7 +71,8 @@ body {
   justify-content: space-evenly;
   position: fixed;
 
- }
+}
+
 .menu {
   width: 100%;
   top: 0;
@@ -76,23 +84,26 @@ body {
   /* padding: 0% 5%; */
   justify-content: space-evenly;
 
-} 
+}
+
 .logo {
   font-family: var(--fonte02);
   font-size: 35px;
   font-weight: 500;
   letter-spacing: 1px;
   font-style: italic;
-  text-transform: uppercase; 
+  text-transform: uppercase;
   width: 50px;
   display: flex;
   align-items: center;
   justify-content: center;
 }
-.logo img{
+
+.logo img {
   width: 40px;
-  
+
 }
+
 .menu_items {
   display: flex;
   font-family: var(--fonte_titulo);
@@ -102,7 +113,8 @@ body {
   font-weight: bolder;
   /* text-transform: uppercase; */
 }
-.dnav{
+
+.dnav {
   width: 100%;
 }
 
@@ -117,6 +129,7 @@ body {
   font-weight: 500;
   color: white;
 }
+
 .pesquisar {
   position: relative;
   display: flex;
@@ -124,16 +137,19 @@ body {
   justify-content: center;
   /* margin-left: 10vw; */
 }
+
 .icon-lupa a {
   display: flex;
   align-items: center;
   justify-content: center;
 }
-.input-pesquisar{
+
+.input-pesquisar {
   position: relative;
   margin-left: 5px;
 }
-.input-pesquisar input{
+
+.input-pesquisar input {
   padding: 8px;
   border-radius: 20px;
   border: none;
@@ -141,7 +157,8 @@ body {
   font-size: 1em;
   background-color: rgba(255, 255, 255, 0.6);
 }
-.hide{
+
+.hide {
   display: none;
 }
 
@@ -150,8 +167,12 @@ main {
   height: 100%;
   padding: 50px 0 0 0;
   /* margin-top: 100px; */
+
+  font-family: 'Inter', sans-serif;
 }
-.container-principal, .quem-somos-nos {
+
+.container-principal,
+.quem-somos-nos {
   display: flex;
   width: 100%;
   height: 100%;
@@ -161,10 +182,12 @@ main {
   justify-content: center;
   flex-direction: column;
 }
-.container-principal{
+
+.container-principal {
   padding-bottom: 80px;
   position: relative;
 }
+
 .artigo-principal {
   display: flex;
   justify-content: space-between;
@@ -178,6 +201,7 @@ main {
   padding: 0 30px;
   gap: 50px;
 }
+
 .artigo-imagem {
   display: flex;
   justify-content: center;
@@ -185,28 +209,29 @@ main {
   height: 100%;
   width: 100%;
 }
-.text, .imagem{
+
+.text,
+.imagem {
   display: flex;
   justify-content: center;
   align-items: flex-start;
+  min-width: 300px;
 }
 
 .imagem img {
   width: 100%;
   background-size: cover;
-  /* min-width: 300px; */
 }
-.artigo-text{
-  background-color: var(--cor02);
-  /* box-shadow: 1px 2px 5px rgba(0, 0, 0, 0.4); */
+
+.artigo-text {
   position: relative;
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  /* color: var(--cor01); */
   text-align: center;
-  /* width: 100%; */
+  height: 100%;
+  width: 100%;
 }
 
 .text {
@@ -215,31 +240,34 @@ main {
   flex-direction: column;
   position: relative;
   width: 100%;
-  /* margin-bottom: 300px; */
-  /* gap: 30px; */
 }
-.text-titulo h1, .text-titulo h2 {
+
+.text-titulo h1,
+.text-titulo h2 {
   font-family: 'Times New Roman', Times, serif;
   text-align: left;
 }
+
 .text-titulo h2 {
   font-size: 3em;
   font-family: var(--fonte02);
   font-weight: 500;
 }
+
 .text-titulo h1 {
   font-family: var(--fonte02);
   font-weight: 500;
   font-size: 10em;
 }
-.text-mensage{
+
+.text-mensage {
   font-size: 17px;
   text-align: center;
   width: 100%;
   height: 100px;
 }
 
-.contato-principal{
+.contato-principal {
   position: absolute;
   bottom: 20px;
   right: 70px;
@@ -250,8 +278,8 @@ main {
 }
 
 
-.quem-somos-nos{
-  background-color:  #ebebeb;
+.quem-somos-nos {
+  background-color: #ebebeb;
   padding: 10% 0;
   min-height: 600px;
 }
@@ -262,16 +290,18 @@ main {
   position: absolute;
 }
 
-.btn-dark{
+.btn-dark {
   position: absolute;
   top: 60px;
   right: 15px;
 }
-.checkbox{
+
+.checkbox {
   opacity: 0;
   position: absolute;
 }
-.label{
+
+.label {
   background-color: #111;
   border-radius: 50px;
   cursor: pointer;
@@ -284,6 +314,7 @@ main {
   width: 40px;
   transform: scale(1.5);
 }
+
 .bola {
   background-color: #fff;
   border-radius: 50%;
@@ -295,31 +326,34 @@ main {
   transform: translateX(0px);
   transition: transform .2s linear;
 }
-.checkbox:checked + .label .bola{
+
+.checkbox:checked+.label .bola {
   transform: translateX(20px);
 }
-.fa-lua{
+
+.fa-lua {
   color: #f1c40f;
   width: 14px;
   height: 14px;
 }
-.fa-sol{
+
+.fa-sol {
   color: #f39c12;
   width: 14px;
   height: 14px;
 }
 
-.footer{
+.footer {
   font-family: 'Poppins', sans-serif;
-  
+
 }
 
 
-.footer h2{
+.footer h2 {
   font-family: 'Poppins', sans-serif;
 }
 
-.footer{
+.footer {
   width: 100%;
   min-height: 300px;
   background-color: #27242c;
@@ -331,28 +365,33 @@ main {
   position: relative;
   flex-direction: column;
 }
-.text_footer{
+
+.text_footer {
   text-align: center;
 }
-.text_footer h2{
+
+.text_footer h2 {
   font-weight: 400;
   font-size: 16px;
 }
-.text_footer h1{
+
+.text_footer h1 {
   font-size: 40px;
   font-weight: 700;
 }
-.content_bottom{
+
+.content_bottom {
   position: absolute;
   bottom: 0;
   width: 100%;
   display: flex;
   align-items: center;
-  justify-content: center;            
+  justify-content: center;
   background-color: #181719;
   height: 50px;
 }
-.content_top{
+
+.content_top {
   display: flex;
   align-items: flex-start;
   /* flex-direction: column; */
@@ -361,43 +400,125 @@ main {
   width: 60%;
   height: 70%;
 }
-.logos_footer{
+
+.logos_footer {
   margin-top: 10px;
 }
-.logos_footer img{
+
+.logos_footer img {
   width: 50px;
   height: 50px;
 }
-.left_footer{
+
+.left_footer {
   text-align: center;
 }
 
-.quem-somos-nos#paralax{
+.quem-somos-nos#paralax {
   background-image: url(../img/background-estanteDeLivros.jfif);
   background-size: cover;
   background-attachment: fixed;
   background-position: center;
+  padding: 10vw;
 }
-.note-block{
+
+.note-block {
   padding: 50px;
   min-height: 100%;
-  width: 80%;
+  width: 100%;
   max-width: 800px;
-  margin: 20px;
   background-color: rgba(255, 255, 255, 0.6);
-  backdrop-filter:blur(5px);
+  backdrop-filter: blur(5px);
   border-radius: 5px;
   box-shadow: 1px 3px 4px rgba(0, 0, 0, 0.5);
 }
-.note-h2{
+
+.note-h1 {
   margin: 8px;
   font-size: 2.5em;
   text-shadow: 1px 2px 4px rgba(0, 0, 0, 0.2);
   font-family: var(--fonte_titulo);
 }
-.note{
-  text-shadow: 1px 2px 5px rgba(0, 0, 0, 0.3);
+
+.note {
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.3);
   text-align: justify;
-  margin-bottom: 10px;
+  margin-bottom: 8px;
   text-indent: 35px;
+}
+
+@media (max-width: 1100px) {
+  .text-titulo h1 {
+    font-size: 8em;
+  }
+}
+
+@media (max-width: 900px) {
+  .artigo-principal {
+    flex-direction: column;
+    min-height: 600px;
+    gap: 0;
+  }
+
+  .imagem {
+    max-width: 400px;
+  }
+
+  .text {
+    align-items: center;
+  }
+}
+
+@media (max-width: 600px) {
+  .quem-somos-nos#paralax {
+    padding: 5vw;
+  }
+}
+
+@media (max-width: 500px) {
+  .text-titulo h1 {
+    font-size: 6em;
+  }
+
+  .text-mensage p {
+    font-size: 14px;
+  }
+
+  .artigo-principal {
+    min-height: 400px;
+  }
+
+  .note-h1 {
+    margin: 0;
+    margin-bottom: 8px;
+    font-size: 2em;
+  }
+
+  .note-block {
+    padding: 30px;
+  }
+  .note{
+    line-height: 20px;
+  }
+}
+
+@media (max-width: 400px) {
+  .text-titulo h1 {
+    font-size: 4.7em;
+  }
+
+  .text-mensage p {
+    font-size: 14px;
+  }
+
+  .text,
+  .imagem {
+    min-width: 250px;
+  }
+  .note-h1 {
+    margin-bottom: 8px;
+    font-size: 1.59em;
+    margin: 0;
+    margin-bottom: 8px;
+  }
 }

@@ -1,0 +1,26 @@
+
+main{
+    padding: 20px;
+}
+
+.titulo-edicao {
+    font-family: var(--fonte_titulo);
+    position: relative;
+    text-align: center;
+    font-size: 60px;
+    font-weight: 400;
+    transition: 1.3s;
+    padding: 0px 0px 15px 0px;
+}
+.container-edicao {
+    border: 1px solid rgb(173, 173, 173);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    min-height: 90vh;
+    border-radius: 5px;
+    background-color: white;
+    width: 100%;
+    padding: 30px;
+}
