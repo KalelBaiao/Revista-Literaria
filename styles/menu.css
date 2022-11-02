@@ -312,6 +312,47 @@
     .menu-fixed {
         display: none;
     }
+
+    .close .menu-edicoes-mobile > i{
+        display: none;
+    }
+
+    .menu-edicoes-mobile{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+        gap: 4px;
+      }
+      .menu-edicoes-mobile i{
+        color: black;
+        cursor: pointer;
+      }
+      .menu-edicoes-mobile .menu-absolute-mobile{
+        position: absolute;
+        top: -15px;
+        left: 236px;
+        background: linear-gradient(to right, #ebebeb, #f8f8f8 3%);
+        padding: 8px;
+        border-radius: 0 4px 4px 0;
+        z-index: 5;
+        width: 200px;
+        text-align: center;
+        align-items: center;
+      }
+      .menu-absolute-mobile a{
+        transition: .3s;
+        font-size: 15px;
+        font-weight: 500;
+      }
+      .menu-absolute-mobile li{
+        margin: 0;
+      }
+      .menu-absolute-mobile li:hover a{
+        color: var(--azul05);
+        background-color: transparent;
+      }
+      
 }
 
 @media (max-width: 600px) {

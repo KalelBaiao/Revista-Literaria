@@ -19,8 +19,9 @@ const sidebar = document.querySelector(".sidebar")
 const toggle = document.querySelector(".toggle")
 const searchBtn = document.querySelector(".search-box")
 const btnDown = document.querySelector(".btn-down")
+const btnDownMobile = document.querySelector(".btn-down-mobile")
 const menuAbsolute = document.querySelector(".menu-absolute")
-
+const menuAbsoluteMobile = document.querySelector(".menu-absolute-mobile")
 
 toggle.addEventListener('click', () => {
     sidebar.classList.toggle("close")
@@ -33,6 +34,11 @@ searchBtn.addEventListener('click', () => {
 btnDown.addEventListener("click", () => {
     menuAbsolute.classList.toggle("hide")
     btnDown.classList.toggle("bx-rotate-180")
+})
+btnDownMobile.addEventListener("click", () => {
+    menuAbsoluteMobile.classList.toggle("hide")
+    btnDownMobile.classList.toggle("bx-rotate-90")
+    btnDownMobile.classList.toggle("bx-rotate-270")
 })
 
 // modeSwtich.addEventListener('click', () => {

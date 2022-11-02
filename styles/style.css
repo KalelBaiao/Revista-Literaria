@@ -160,7 +160,7 @@ body {
 
 
 .menu-edicoes{
-  display: flex;;
+  display: flex;
   align-items: center;
   justify-content: center;
   position: relative;
@@ -172,14 +172,18 @@ body {
 }
 .menu-edicoes .menu-absolute{
   position: absolute;
-  top: 38px;
-  background: linear-gradient(to bottom, #c4c4cc, #ebebeb 10%);
+  top: 37px;
+  background: linear-gradient(to bottom, #c4c4cc, #ebebeb 16%);
   padding: 8px;
   border-radius: 0 0 4px 4px;
   z-index: 5;
+  width: 200px;
+  text-align: center;
 }
 .menu-absolute a{
   transition: .3s;
+  font-size: 15px;
+  font-weight: 500;
 }
 .menu-absolute li:hover a{
   color: var(--azul05);

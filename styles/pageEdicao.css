@@ -17,18 +17,28 @@ main{
     justify-content: center;
     height: 100%;
     min-height: 90vh;
-    border-radius: 5px;
     background-color: white;
     width: 100%;
+}
+.container-publicacoes{
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    grid-template-columns: 1fr 1fr 1fr;
+    width: 100%;
+    height: 100%;
     padding: 30px;
     gap: 30px;
 }
 .publicacao{
     height: 100%;
-    min-width: 300px;
+    min-width: 270px;
+    max-width: 450px;
     display: flex;
     flex-direction: column;
     gap: 20px;
+    margin: auto;
+    padding: 4px;
 }
 .publicacao .principal{
     display: flex;
@@ -83,4 +93,27 @@ main{
 }
 .btn-vejaMais a:hover{
     transform: scale(.95);
+}
+
+
+@media (max-width: 1100px){
+    .container-publicacoes{
+        grid-template-columns: 1fr 1fr;
+    }
+}
+@media (max-width: 900px){
+    .container-publicacoes{
+        grid-template-columns: 1fr;
+    }
+}
+@media (max-width: 400px){
+    .titulo-edicao{
+        font-size: 48px;
+    }
+    main{
+        padding: 5px;
+    }
+    .container-publicacoes{
+        padding: 0;
+    }
 }

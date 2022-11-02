@@ -78,9 +78,11 @@ main{
   flex-direction: column;
   gap: 15px;
 }
+.text-edicao p:first-child{
+  text-indent: 35px;
+}
 .text-edicao p{
   text-align: justify;
-  text-indent: 35px;
 }
 .text-edicao strong{
   margin-right: 5px;

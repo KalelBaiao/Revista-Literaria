@@ -60,8 +60,10 @@ const verificaADM = async ({ uid }) => {
 
 const buscaDados = async () => {
     const query = await getDocs(collection(firestore, "users"));
+    console.log(query);
     query.forEach(async (doc) => {
         const uid = doc.id
+        console.log(uid);
 
         // const querySnapshot = await getDocs(collection(firestore, "users", uid, "cadastro"))
         // querySnapshot.forEach((d) => {
@@ -71,7 +73,6 @@ const buscaDados = async () => {
         const PDFsRef = await getDocs(collection(firestore, "users", uid, "PDFs"))
         PDFsRef.forEach(async (a) => {
             const pdf = a.data()
-
             const storageRef = await ref(storage, `Submissões/${uid}/${pdf.arquivo}/[object File]`)
             getDownloadURL(storageRef)
                 .then(async (url) => {
