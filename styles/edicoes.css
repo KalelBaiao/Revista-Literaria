@@ -22,7 +22,6 @@ main{
   border: 1px solid rgb(173, 173, 173);
   display: flex;
   justify-content: center;
-  align-items: center;
   height: 100%;
   min-height: 90vh;
   border-radius: 5px;

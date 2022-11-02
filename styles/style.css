@@ -158,6 +158,36 @@ body {
   background-color: rgba(255, 255, 255, 0.6);
 }
 
+
+.menu-edicoes{
+  display: flex;;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  gap: 4px;
+}
+.menu-edicoes i{
+  color: white;
+  cursor: pointer;
+}
+.menu-edicoes .menu-absolute{
+  position: absolute;
+  top: 38px;
+  background: linear-gradient(to bottom, #c4c4cc, #ebebeb 10%);
+  padding: 8px;
+  border-radius: 0 0 4px 4px;
+  z-index: 5;
+}
+.menu-absolute a{
+  transition: .3s;
+}
+.menu-absolute li:hover a{
+  color: var(--azul05);
+}
+
+
+
+
 .hide {
   display: none;
 }

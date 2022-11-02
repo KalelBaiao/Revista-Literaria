@@ -18,8 +18,8 @@
 const sidebar = document.querySelector(".sidebar")
 const toggle = document.querySelector(".toggle")
 const searchBtn = document.querySelector(".search-box")
-
-
+const btnDown = document.querySelector(".btn-down")
+const menuAbsolute = document.querySelector(".menu-absolute")
 
 
 toggle.addEventListener('click', () => {
@@ -28,6 +28,11 @@ toggle.addEventListener('click', () => {
 
 searchBtn.addEventListener('click', () => {
     sidebar.classList.remove("close")
+})
+
+btnDown.addEventListener("click", () => {
+    menuAbsolute.classList.toggle("hide")
+    btnDown.classList.toggle("bx-rotate-180")
 })
 
 // modeSwtich.addEventListener('click', () => {
@@ -39,3 +44,4 @@ searchBtn.addEventListener('click', () => {
 //         modeText.innerText = "Dark Mode"
 //     }
 // })
+
