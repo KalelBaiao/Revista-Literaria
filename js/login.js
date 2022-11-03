@@ -1,5 +1,5 @@
 import { initializeApp } from "https://www.gstatic.com/firebasejs/9.4.0/firebase-app.js"
-import { getAuth, createUserWithEmailAndPassword, signInWithEmailAndPassword, onAuthStateChanged, signOut } from "https://www.gstatic.com/firebasejs/9.4.0/firebase-auth.js"
+import { getAuth, createUserWithEmailAndPassword, signInWithEmailAndPassword, onAuthStateChanged, signOut, sendPasswordResetEmail } from "https://www.gstatic.com/firebasejs/9.4.0/firebase-auth.js"
 import { getStorage, ref, uploadBytesResumable } from "https://www.gstatic.com/firebasejs/9.4.0/firebase-storage.js"
 import { getFirestore, collection, addDoc, getDoc, doc, getDocs } from "https://www.gstatic.com/firebasejs/9.4.0/firebase-firestore.js"
 
@@ -23,6 +23,7 @@ const formContato = document.querySelector('.form-contato')
 const containerCadastro = document.querySelector(".container-cadastro")
 const containerLogin = document.querySelector(".container-login")
 const containerContato = document.querySelector(".container-contato")
+const mensagensJs = document.querySelector(".mensagens-js")
 
 const app = initializeApp(firebaseApp)
 const storage = getStorage(app)
@@ -39,50 +40,30 @@ onAuthStateChanged(auth, (user) => {
         const user = auth.currentUser
         console.log(user)
 
-        // verificaADM(user)
+        mensagensJs.classList.add("none")
+        mensagensJs.classList.remove("erro")
     } else {
-        console.log("logue, Por favor!");
         containerContato.classList.add('none')
         containerLogin.classList.remove('none')
         containerCadastro.classList.add('none')
+
+        mensagensJs.innerText = "Cadastre-se e/ou Logue"
+        mensagensJs.classList.remove("none")
     }
 })
-// .
-
-// verifica se o usuario é um Administrador
-// const verificaADM = async ({ uid }) => {
-//     const querySnapshot = await getDocs(collection(firestore, "users", uid, "cadastro"));
-//     querySnapshot.forEach((doc) => {
-//         console.log(doc.id, " => ", doc.data());
-//         const usuario = doc.data()
-//         if (usuario.adm == true) {
-//             console.log(`${usuario.nome} é um Administrador`)
-
-//             const menu = document.querySelector(".menu-mobile")
-//             const li = document.createElement("li")
-//             li.innerHTML = `
-//             <a href="adm.html">
-//                 <i class="bx bx-key icon"></i>
-//                 <span class="text-menu nav-text">ADM</span>
-//             </a> `
-//             menu.appendChild(li)
-
-//             buscaDados(uid)
-//         } else {
-//             console.log(`${usuario.nome} não é um Administrador`);
-//         }
-//     })
-// }
 // .
 
 // cadatra o usuario
 formCadastro.addEventListener("submit", async (e) => {
     e.preventDefault()
-    const nome = document.getElementById("input-nome").value
-    const email = document.getElementById("cadastro-input-email").value
-    const senha = document.getElementById("cadastro-input-senha").value
+    const nome = document.getElementById("input-nome")
+    const email = document.getElementById("cadastro-input-email")
+    const senha = document.getElementById("cadastro-input-senha")
+    const Vnome = nome.value
+    const Vemail = email.value
+    const Vsenha = senha.value
 
-    createUserWithEmailAndPassword(auth, email, senha)
+    createUserWithEmailAndPassword(auth, Vemail, Vsenha)
         .then((userCredential) => {
             const user = userCredential.user;
             console.log(user)
@@ -90,20 +71,31 @@ formCadastro.addEventListener("submit", async (e) => {
             try {
                 const user = auth.currentUser
                 const docRef = addDoc(collection(firestore, "users", user.uid, "cadastro"), {
-                    nome: `${nome}`,
-                    email: `${email}`,
-                    senha: `${senha}`,
+                    nome: `${Vnome}`,
+                    email: `${Vemail}`,
                     adm: false
                 })
                 console.log("Document written with ID: ", docRef.id)
-            } catch (e) {
-                console.error("Error adding document: ", e)
+            } catch (error) {
+                console.error("Error adding document: ", error)
+                mensagensJs.innerHTML = `Falha no cadastro! Por favor atualize a página e tente novamente. <br> ${error.code}`
+                mensagensJs.classList.remove("none")
+                mensagensJs.classList.add("erro")
             }
         })
         .catch((error) => {
-            const errorCode = error.code;
-            const errorMessage = error.message;
-            console.log(errorCode, errorMessage)
+            mensagensJs.classList.add("erro")
+            if (senha.value.length < 6) {
+                mensagensJs.innerText = "Sua senha deve ter no mínimo 6 carateres"
+                mensagensJs.classList.remove("none")
+            }else if (error.code == "auth/email-already-in-use") {
+                mensagensJs.innerText = "Usuário já cadastrado! faça login."
+                mensagensJs.classList.remove("none")
+            }else {
+                mensagensJs.innerHTML = `Falha no cadastro! Por favor atualize a página e tente novamente. <br> ${error.code}`
+                mensagensJs.classList.remove("none")
+            }
+            console.log(error.code)
         })
 
 })
@@ -121,9 +113,20 @@ formLogin.addEventListener("submit", async (e) => {
             console.log(user)
         })
         .catch((error) => {
-            const errorCode = error.code
-            const errorMessage = error.message
-            console.log(errorCode, errorMessage)
+            console.log(error.code)
+            mensagensJs.classList.add("erro")
+            if (error.code == "auth/wrong-password") {
+                mensagensJs.innerText = "Senha Incorreta!"
+                mensagensJs.classList.remove("none")
+            }else if (error.code == "auth/user-not-found"){
+                mensagensJs.innerText = "Usuario não cadastrato. Por favor verifique seus dados ou cadastre-se."
+                mensagensJs.classList.remove("none")
+            }else if (error.code == "auth/too-many-requests"){
+                mensagensJs.innerText = "Muitas requisições em sequência. atualize a página e tente novamente."
+                mensagensJs.classList.remove("none")
+            }else{
+                mensagensJs.innerText = `${error.code}`
+            }
         })
 })
 //
@@ -149,7 +152,10 @@ formContato.addEventListener("submit", async (e) => {
             btnSubmit.innerText = "ENVIADO COM SUCESSO!!!"
 
         }).catch((error) => {
-            console.log(error)
+            console.log(error.code)
+            mensagensJs.innerHTML = `Falha no envio! Por favor atualize a página e tente novamente. <br> ${error.code}`
+            mensagensJs.classList.remove("none")
+            mensagensJs.classList.add("erro")
         })
 
     try {
@@ -162,7 +168,9 @@ formContato.addEventListener("submit", async (e) => {
         })
         console.log("Document written with ID: ", docRef.id)
     } catch (e) {
-        console.error("Error adding document: ", e)
+        mensagensJs.innerHTML = `Falha no envio! Por favor atualize a página e tente novamente. <br> ${error.code}`
+        mensagensJs.classList.remove("none")
+        mensagensJs.classList.add("erro")
     }
 })
 // .
@@ -182,5 +190,29 @@ btnCadastrar.addEventListener("click", () => {
     containerContato.classList.add('none')
     containerLogin.classList.add('none')
     containerCadastro.classList.remove('none')
+})
+
+const btnEsqueceuSenha = document.querySelector(".btn-esqueceu-senha")
+btnEsqueceuSenha.addEventListener("click", () => {
+    const email = document.getElementById("login-input-email")
+    sendPasswordResetEmail(auth, email.value)
+        .then(() => {
+            mensagensJs.innerHTML = "Confirmação enviada. Clique no link enviado ao e-mail cadastrado. <br> Obs: vefique a caixa de Spam."
+            mensagensJs.classList.remove("none")
+            mensagensJs.classList.remove("erro")
+        })
+        .catch((error) => {
+            console.log(error.code);
+            mensagensJs.classList.add("erro")
+            if (error.code == "auth/missing-email") {
+                mensagensJs.innerText = "Preencha a caixa de E-mail!"
+                mensagensJs.classList.remove("none")
+            }else if (error.code == "auth/user-not-found"){
+                mensagensJs.innerText = "Usuario não cadastrato. Por favor verifique seus dados ou cadastre-se."
+                mensagensJs.classList.remove("none")
+            }else{
+                mensagensJs.innerText = `${error.code}`
+            }
+        })
 })
 // .

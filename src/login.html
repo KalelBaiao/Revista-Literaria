@@ -148,13 +148,13 @@
     </div> 
     <main>
       <section class="container-fire">
-        <article class="container-cadastro">
+        <article class="container-cadastro none">
           <div class="image-login"><img src="../img/icons8-e-book-48.png" /></div>
           <h1>Cadastro</h1>
           <h2 id="sub-titulo">Cadastre-se e Publique suas obras!</h2>
           <form method="post" class="form-cadastro">
             <label for="nome">Nome</label>
-            <input type="text" name="nome" id="input-nome" required placeholder="Informe seu nome">
+            <input type="text" name="nome" id="input-nome" required placeholder="Informe seu nome completo">
             <label for="email">E-mail</label>
             <input type="email" name="email" id="cadastro-input-email" required placeholder="Informe seu E-mail"/>
             <label for="senha">Senha</label>
@@ -171,18 +171,19 @@
             <input type="email" name="email" id="login-input-email" required placeholder="Informe seu E-mail"/>
             <label for="senha">Senha</label>
             <input type="password" name="senha" id="input-senha" required placeholder="Informe sua senha">
+            <div class="btn-esqueceu-senha"><a href="#" class="cadastrar">Click aqui para redefinir sua senha</a></div>
             <button type="submit" id="login-envio"  class="Cenvio">Entrar</button>
           </form>
-          <div class="btn-cadastrar"><a href="#" class="cadastrar">Click para criar seu cadastro</a></div>
+          <div class="btn-cadastrar"><a href="#" class="cadastrar">Click aqui para fazer seu cadastro!</a></div>
         </article>
         <article class="container-contato none">
           <div class="image-login"><img src="../img/icons8-e-book-48.png" /></div>
             <h1>Submissão de Arquivos</h1>
             <form method="post" class="form-contato">
               <label for="name">Nome</label>
-              <input type="text" name="name" id="input-name" required>
+              <input type="text" name="name" id="input-name" required placeholder="Informe seu nome completo">
               <label for="email">E-mail</label>
-              <input type="email" name="email" id="contato-input-email" required>
+              <input type="email" name="email" id="contato-input-email" required placeholder="Informe seu E-mail">
               <!-- <label for="message">Mensagem</label>
                 <textarea name="message" id="message" placeholder="Escreva aqui"></textarea> -->
               <label for="arquivo">Arquivo</label>
@@ -191,6 +192,9 @@
             </form>
             <div class="btn-deslogar"><a href="#" id="deslogar">Click para deslogar</a></div>
         </article>
+        <h4 class="mensagens-js none">
+          Digite sua senha novamente
+        </h4>
       </section>
     </main>
     <footer class="footer">

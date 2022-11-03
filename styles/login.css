@@ -40,7 +40,6 @@ main {
   height: 600px;
   border-radius: 8px;
   padding: 16px 32px;
-  margin: auto;
   background-color: var(--gray900);
   color: var(--gray100);
 }
@@ -103,11 +102,14 @@ main {
   margin-top: 24px;
   text-align: center;
 }
-.btn-deslogar a, .btn-cadastrar a{
+.btn-esqueceu-senha a{
+  font-size: 14px;
+}
+.btn-deslogar a, .btn-cadastrar a, .btn-esqueceu-senha a{
   color: var(--gray100);
   text-decoration: underline;
 }
-.btn-deslogar a:hover, .btn-cadastrar a:hover{
+.btn-deslogar a:hover, .btn-cadastrar a:hover, .btn-esqueceu-senha a:hover{
   color: var(--gray200);
   transition: .3s;
   text-decoration: underline;
@@ -212,6 +214,21 @@ main {
   cursor: pointer;
   transition: 0.2s;
   margin-top: 40px;
+}
+
+.mensagens-js{
+  background-color: var(--gray200);
+  width: calc(100% - 12px);
+  max-width: 538px;
+  border-radius: 0 0 8px 8px;
+  color: black;
+  display: flex;
+  justify-content: center;
+  padding: 10px;
+  font-size: 20px;
+}
+.mensagens-js.erro{
+  color: red;
 }
 
 @media (max-width: 700px) {

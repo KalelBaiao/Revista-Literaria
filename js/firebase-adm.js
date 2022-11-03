@@ -75,7 +75,7 @@ const buscaDados = async () => {
             
             const storageRef = await ref(storage, `Submissões/${pdf.uid}/${pdf.arquivo}/[object File]`)
             getDownloadURL(storageRef)
-                .then(async (url) => {
+                .then((url) => {
                     const users = document.querySelector(".users")
                     const user = document.createElement("article")
                     user.classList.add("user")
