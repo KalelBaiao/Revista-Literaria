@@ -1,5 +1,5 @@
 import { initializeApp } from "https://www.gstatic.com/firebasejs/9.4.0/firebase-app.js"
-import { getAuth, createUserWithEmailAndPassword, signInWithEmailAndPassword, onAuthStateChanged, signOut, sendPasswordResetEmail } from "https://www.gstatic.com/firebasejs/9.4.0/firebase-auth.js"
+import { getAuth, createUserWithEmailAndPassword, signInWithEmailAndPassword, onAuthStateChanged, signOut, sendPasswordResetEmail, sendEmailVerification } from "https://www.gstatic.com/firebasejs/9.4.0/firebase-auth.js"
 import { getStorage, ref, uploadBytesResumable } from "https://www.gstatic.com/firebasejs/9.4.0/firebase-storage.js"
 import { getFirestore, collection, addDoc, getDoc, doc, getDocs } from "https://www.gstatic.com/firebasejs/9.4.0/firebase-firestore.js"
 
@@ -38,10 +38,19 @@ onAuthStateChanged(auth, (user) => {
         containerLogin.classList.add('none')
         containerCadastro.classList.add('none')
         const user = auth.currentUser
-        console.log(user)
 
-        mensagensJs.classList.add("none")
+        console.log(user, user.emailVerified);
+
         mensagensJs.classList.remove("erro")
+
+        if (user.emailVerified == false) {
+            sendEmailVerification(user).then(() => {
+                mensagensJs.innerHTML = "Verique seu e-mail para autentica-lo. <br> verifique a caixa de Spam. <br> Obs: atualize a página após a verificação"
+                mensagensJs.classList.remove("none")
+            })
+        } else {
+            mensagensJs.classList.add("none")
+        }
     } else {
         containerContato.classList.add('none')
         containerLogin.classList.remove('none')
@@ -67,19 +76,6 @@ formCadastro.addEventListener("submit", async (e) => {
         .then(async (userCredential) => {
             const user = userCredential.user;
             console.log(user)
-
-
-            // await onAuthStateChanged(auth, async (u) => {
-            //     await sendEmailVerification(u)
-            //         .then(() => {
-            //             console.log('Enviado')
-            //             mensagensJs.innerHTML = "Cadastro Enviado! Verique seu e-mail para autenticação. <br> Obs: Talvez esteja na caixa de Spam."
-            //             mensagensJs.classList.remove("none")
-            //         }).catch((error) => {
-            //             console.log(error);
-            //         })
-            // })
-
 
             try {
                 const user = auth.currentUser
@@ -141,7 +137,7 @@ formLogin.addEventListener("submit", async (e) => {
                 mensagensJs.innerText = `${error.code}`
             }
         })
-}) 
+})
 //
 
 // envia os arquivos 
@@ -149,39 +145,46 @@ formContato.addEventListener("submit", async (e) => {
     e.preventDefault()
 
     btnSubmit.innerText = "*CARREGANDO*"
-
-    const file = document.querySelector(".file").files[0]
-    const nome = document.getElementById("input-name")
-    const email = document.getElementById("contato-input-email")
-
     const user = auth.currentUser
+    console.log(user, user.emailVerified);
+    const email = user.email
+    console.log(email);
 
-    const storageRef = await ref(storage, `Submissões/${user.uid}/${file.name}/${file}`)
-    uploadBytesResumable(storageRef, file)
-        .then(() => {
-            nome.value = ''
-            email.value = ''
-            file.value = ''
-            btnSubmit.innerText = "ENVIADO COM SUCESSO!!!"
+    if (user.emailVerified) {
+        const file = document.querySelector(".file").files[0]
+        const nome = document.getElementById("input-name")
+        const email = user.email
 
-        }).catch((error) => {
-            console.log(error.code)
-            mensagensJs.innerHTML = `Falha no envio! Por favor atualize a página e tente novamente. <br> ${error.code}`
+        const storageRef = await ref(storage, `Submissões/${user.uid}/${file.name}/${file}`)
+        uploadBytesResumable(storageRef, file)
+            .then(() => {
+                nome.value = ''
+                file.value = ''
+                btnSubmit.innerText = "ENVIADO COM SUCESSO!!!"
+
+            }).catch((error) => {
+                console.log(error.code)
+                mensagensJs.innerHTML = `Falha no envio! Por favor atualize a página e tente novamente. <br> ${error.code}`
+                mensagensJs.classList.remove("none")
+                mensagensJs.classList.add("erro")
+            })
+
+        try {
+            // setDoc(doc(firestore, "users", "new-user"), data)
+            const docRef = await addDoc(collection(firestore, "users", user.uid, "PDFs"), {
+                nome: `${nome.value}`,
+                email: `${email}`,
+                arquivo: `${file.name}`,
+                uid: `${user.uid}`
+            })
+            console.log("Document written with ID: ", docRef.id)
+        } catch (e) {
+            mensagensJs.innerHTML = `Falha no envio! Por favor atualize a página e tente novamente. <br> ${e.code}`
             mensagensJs.classList.remove("none")
             mensagensJs.classList.add("erro")
-        })
-
-    try {
-        // setDoc(doc(firestore, "users", "new-user"), data)
-        const docRef = await addDoc(collection(firestore, "users", user.uid, "PDFs"), {
-            nome: `${nome.value}`,
-            email: `${email.value}`,
-            arquivo: `${file.name}`,
-            uid: `${user.uid}`
-        })
-        console.log("Document written with ID: ", docRef.id)
-    } catch (e) {
-        mensagensJs.innerHTML = `Falha no envio! Por favor atualize a página e tente novamente. <br> ${error.code}`
+        }
+    } else {
+        mensagensJs.innerHTML = `E-mail não autenticado! Por favor verique seu e-mail para autenticação. <br> Obs: Talvez esteja na caixa de Spam.`
         mensagensJs.classList.remove("none")
         mensagensJs.classList.add("erro")
     }

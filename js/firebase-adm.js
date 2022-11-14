@@ -18,19 +18,18 @@ const app = initializeApp(firebaseApp)
 const storage = getStorage(app)
 const firestore = getFirestore(app)
 const auth = getAuth(app)
-
 // verifica se o usuario está logado
 onAuthStateChanged(auth, async (user) => {
     if (user) {
         const user = await auth.currentUser
         verificaADM(user)
-        console.log(user);
+        console.log(user, user.emailVerified);
     } else {
         console.log("logue, Por favor!");
     }
-    await sendEmailVerification(user).then(() => {
-        console.log('Enviado')
-    })
+    // await sendEmailVerification(user).then(() => {
+    //     console.log('Enviado')
+    // })
 })
 // .
 
