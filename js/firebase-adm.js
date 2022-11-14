@@ -1,5 +1,5 @@
 import { initializeApp } from "https://www.gstatic.com/firebasejs/9.4.0/firebase-app.js"
-import { getAuth, onAuthStateChanged } from "https://www.gstatic.com/firebasejs/9.4.0/firebase-auth.js"
+import { getAuth, onAuthStateChanged, sendEmailVerification } from "https://www.gstatic.com/firebasejs/9.4.0/firebase-auth.js"
 import { getStorage, ref, getDownloadURL } from "https://www.gstatic.com/firebasejs/9.4.0/firebase-storage.js"
 import { getFirestore, collection, getDocs, collectionGroup, query } from "https://www.gstatic.com/firebasejs/9.4.0/firebase-firestore.js"
 
@@ -24,9 +24,13 @@ onAuthStateChanged(auth, async (user) => {
     if (user) {
         const user = await auth.currentUser
         verificaADM(user)
+        console.log(user);
     } else {
         console.log("logue, Por favor!");
     }
+    await sendEmailVerification(user).then(() => {
+        console.log('Enviado')
+    })
 })
 // .
 
@@ -59,12 +63,12 @@ const verificaADM = async ({ uid }) => {
 // .
 
 const buscaDados = async () => {
-    // const pessoas = query(collectionGroup(firestore, 'cadastro'))
-    // const queryPessoas = await getDocs(pessoas)
-    // queryPessoas.forEach(async (user) => {
-    //     const pessoa = user.data()
-    // console.log(pessoa);
-    // })
+    const pessoas = query(collectionGroup(firestore, 'cadastro'))
+    const queryPessoas = await getDocs(pessoas)
+    queryPessoas.forEach(async (user) => {
+        const pessoa = user.data()
+    console.log(pessoa);
+    })
 
     const arquivos = query(collectionGroup(firestore, 'PDFs'))
     const queryArquivos = await getDocs(arquivos)

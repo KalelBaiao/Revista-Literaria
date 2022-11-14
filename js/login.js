@@ -64,9 +64,22 @@ formCadastro.addEventListener("submit", async (e) => {
     const Vsenha = senha.value
 
     createUserWithEmailAndPassword(auth, Vemail, Vsenha)
-        .then((userCredential) => {
+        .then(async (userCredential) => {
             const user = userCredential.user;
             console.log(user)
+
+
+            // await onAuthStateChanged(auth, async (u) => {
+            //     await sendEmailVerification(u)
+            //         .then(() => {
+            //             console.log('Enviado')
+            //             mensagensJs.innerHTML = "Cadastro Enviado! Verique seu e-mail para autenticação. <br> Obs: Talvez esteja na caixa de Spam."
+            //             mensagensJs.classList.remove("none")
+            //         }).catch((error) => {
+            //             console.log(error);
+            //         })
+            // })
+
 
             try {
                 const user = auth.currentUser
@@ -88,10 +101,10 @@ formCadastro.addEventListener("submit", async (e) => {
             if (senha.value.length < 6) {
                 mensagensJs.innerText = "Sua senha deve ter no mínimo 6 carateres"
                 mensagensJs.classList.remove("none")
-            }else if (error.code == "auth/email-already-in-use") {
+            } else if (error.code == "auth/email-already-in-use") {
                 mensagensJs.innerText = "Usuário já cadastrado! faça login."
                 mensagensJs.classList.remove("none")
-            }else {
+            } else {
                 mensagensJs.innerHTML = `Falha no cadastro! Por favor atualize a página e tente novamente. <br> ${error.code}`
                 mensagensJs.classList.remove("none")
             }
@@ -118,13 +131,13 @@ formLogin.addEventListener("submit", async (e) => {
             if (error.code == "auth/wrong-password") {
                 mensagensJs.innerText = "Senha Incorreta!"
                 mensagensJs.classList.remove("none")
-            }else if (error.code == "auth/user-not-found"){
+            } else if (error.code == "auth/user-not-found") {
                 mensagensJs.innerText = "Usuario não cadastrato. Por favor verifique seus dados ou cadastre-se."
                 mensagensJs.classList.remove("none")
-            }else if (error.code == "auth/too-many-requests"){
+            } else if (error.code == "auth/too-many-requests") {
                 mensagensJs.innerText = "Muitas requisições em sequência. atualize a página e tente novamente."
                 mensagensJs.classList.remove("none")
-            }else{
+            } else {
                 mensagensJs.innerText = `${error.code}`
             }
         })
@@ -207,10 +220,10 @@ btnEsqueceuSenha.addEventListener("click", () => {
             if (error.code == "auth/missing-email") {
                 mensagensJs.innerText = "Preencha a caixa de E-mail!"
                 mensagensJs.classList.remove("none")
-            }else if (error.code == "auth/user-not-found"){
+            } else if (error.code == "auth/user-not-found") {
                 mensagensJs.innerText = "Usuario não cadastrato. Por favor verifique seus dados ou cadastre-se."
                 mensagensJs.classList.remove("none")
-            }else{
+            } else {
                 mensagensJs.innerText = `${error.code}`
             }
         })
