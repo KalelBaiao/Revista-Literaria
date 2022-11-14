@@ -141,7 +141,7 @@ formLogin.addEventListener("submit", async (e) => {
                 mensagensJs.innerText = `${error.code}`
             }
         })
-})
+}) 
 //
 
 // envia os arquivos 

@@ -3,7 +3,7 @@ import { getAuth, onAuthStateChanged, sendEmailVerification } from "https://www.
 import { getStorage, ref, getDownloadURL } from "https://www.gstatic.com/firebasejs/9.4.0/firebase-storage.js"
 import { getFirestore, collection, getDocs, collectionGroup, query } from "https://www.gstatic.com/firebasejs/9.4.0/firebase-firestore.js"
 
-
+ 
 const firebaseApp = {
     apiKey: "AIzaSyCCEFGTE5Cy7dHWpoEV-L-vbaar-kMbD_c",
     authDomain: "revista-literatus.firebaseapp.com",
