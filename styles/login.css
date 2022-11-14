@@ -126,6 +126,7 @@ main {
 .form-contato {
   width: 100%;
   font-size: 16px;
+  position: relative;
 }
 
 .form-contato label,
@@ -232,7 +233,14 @@ main {
 }
 
 input[type='file'].file{
-  display: none;
+  /* display: none; */
+  width: 1px;
+  height: 1px;
+  position: absolute;
+  pointer-events: none;
+  bottom: 78px;
+  left: 40%;
+  opacity: 0;
 }
 
 .label-file {
