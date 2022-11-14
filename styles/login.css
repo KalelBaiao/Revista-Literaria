@@ -231,6 +231,23 @@ main {
   color: red;
 }
 
+input[type='file'].file{
+  display: none;
+}
+
+.label-file {
+  background-color: var(--gray100);
+  border-radius: 4px;
+  color: var(--gray900);
+  cursor: pointer;
+  padding: 12px;
+  margin-top: 30px;
+  transition: .3s;
+}
+.label-file:hover{
+  color: var(--azul05);
+}
+
 @media (max-width: 700px) {
   main{
     padding: 20px;

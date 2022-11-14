@@ -232,3 +232,19 @@ btnEsqueceuSenha.addEventListener("click", () => {
         })
 })
 // .
+
+// estilização do input file
+const inputFile = document.getElementById('input-arquivo'),
+    fileName = document.querySelector('.file-name');
+
+inputFile.addEventListener('change', function(){
+  fileName.textContent = this.value;
+});
+// . 
+
+// var $input    = document.getElementById('input-arquivo'),
+//     $fileName = document.querySelector('.file-name');
+
+// $input.addEventListener('change', function(){
+//   $fileName.textContent = this.value;
+// });
