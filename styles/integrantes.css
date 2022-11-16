@@ -81,10 +81,6 @@ main {
   margin: 10px;
 }
 
-.dark .card-membro {
-  box-shadow: 3px 5px 10px rgba(255, 255, 255, 0.8);
-}
-
 .card-membro:after {
   content: '';
   position: absolute;

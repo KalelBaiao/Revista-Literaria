@@ -15,17 +15,12 @@
   --fonte03: 'Cinzel', serif;
   --cor01: #000000;
   --cor02: white;
-  --cor03: #add8e6;
-  --azul01: #D6E0EB;
-  --azul02: #A4BAD1;
-  --azul03: #43627F;
-  --azul04: #0D2A4A;
   --azul05: #55a3e7;
 }
 
 .dark {
   --cor01: whitesmoke;
-  --cor02: #000000;
+  --cor02: #121214;
 }
 
 * {

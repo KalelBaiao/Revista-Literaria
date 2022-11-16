@@ -43,6 +43,10 @@ main {
   background-color: var(--gray900);
   color: var(--gray100);
 }
+.dark .container-login, .dark .container-contato, .dark .container-cadastro {
+  border: 1px solid var(--gray200);
+}
+
 .image-login img{
   height: 64px;
   min-height: 48px;
