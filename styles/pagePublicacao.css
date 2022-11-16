@@ -1,6 +1,7 @@
 
 .titulo-publicacao {
     font-family: var(--fonte_titulo);
+    color: var(--cor01);
     position: relative;
     text-align: center;
     font-size: 60px;
@@ -11,21 +12,22 @@
 .container-publicacao{
     height: 100%;
     min-height: 90vh;
-    background-color: white;
     width: 100%;
     border-top: 2px solid rgba(85, 163, 231, 0.2);
-    padding: 20px;
+    padding: 12px;
 }
 .publicacao{
     height: 100%;
     width: 100%;
     max-width: 900px;
     /* padding: 30px; */
-    padding: 50px 0;
+    padding: 50px 20px;
+    border-radius: 4px;
     display: flex;
     justify-content: center;
     margin: auto;
     flex-direction: column;
+    background-color: whitesmoke;
 }
 .principal{
     text-align: left;

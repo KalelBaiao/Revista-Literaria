@@ -6,11 +6,11 @@
   box-sizing: border-box;
 }
 main{
-  background-color: white;
   padding: 20px 5vw;
 }
 .edicoes{
   font-family: var(--fonte_titulo);
+  color: var(--cor01);
   position: relative;
   text-align: center;
   font-size: 60px;

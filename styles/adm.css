@@ -23,7 +23,6 @@ main{
 .container-users{
     height: 100%;
     width: 100%;
-    background-color: white;
     padding: 20px;
     min-height: 90vh;
 }
