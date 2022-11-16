@@ -25,7 +25,8 @@
     --tran-04: all .4s ease;
     --tran-05: all .5s ease;
 }
-.sidebar{
+
+.sidebar {
     display: none;
 }
 
@@ -97,7 +98,7 @@
     .sidebar.close .menu-bar span {
         display: none;
     }
-
+    
     .header-text {
         display: flex;
         flex-direction: column;
@@ -210,6 +211,11 @@
         background-color: var(--primary-color);
     }
 
+    .sidebar li a:hover+.btn-down-mobile,
+    .btn-down-mobile:hover {
+        color: var(--primary-color);
+    }
+
     .sidebar li .icon {
         font-size: 20px;
         min-width: 60px;
@@ -313,46 +319,57 @@
         display: none;
     }
 
-    .close .menu-edicoes-mobile > i{
+    .close .menu-edicoes-mobile>i {
         display: none;
     }
 
-    .menu-edicoes-mobile{
+    .close .menu-edicoes-mobile .menu-absolute-mobile {
+        display: none;
+    }
+
+    .menu-edicoes-mobile {
         display: flex;
         align-items: center;
         justify-content: center;
         position: relative;
         gap: 4px;
-      }
-      .menu-edicoes-mobile i{
+    }
+
+    .menu-edicoes-mobile>i {
         color: black;
         cursor: pointer;
-      }
-      .menu-edicoes-mobile .menu-absolute-mobile{
+    }
+
+    .menu-edicoes-mobile .menu-absolute-mobile {
         position: absolute;
-        top: -15px;
+        top: -10px;
         left: 236px;
-        background: linear-gradient(to right, #ebebeb, #f8f8f8 3%);
+        background-color: #f8f8f8;
+        box-shadow: inset 3px 0px 15px white,
+            0px 0px 5px rgba(0, 0, 0, 0.1);
         padding: 8px;
         border-radius: 0 4px 4px 0;
         z-index: 5;
         width: 200px;
         text-align: center;
         align-items: center;
-      }
-      .menu-absolute-mobile a{
+    }
+
+    .menu-absolute-mobile a {
         transition: .3s;
         font-size: 15px;
         font-weight: 500;
-      }
-      .menu-absolute-mobile li{
+    }
+
+    .menu-absolute-mobile li {
         margin: 0;
-      }
-      .menu-absolute-mobile li:hover a{
+    }
+
+    .menu-absolute-mobile li:hover a {
         color: var(--azul05);
         background-color: transparent;
-      }
-      
+    }
+
 }
 
 @media (max-width: 600px) {

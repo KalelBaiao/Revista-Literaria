@@ -15,13 +15,13 @@
 
 
 
-const sidebar = document.querySelector(".sidebar")
-const toggle = document.querySelector(".toggle")
-const searchBtn = document.querySelector(".search-box")
-const btnDown = document.querySelector(".btn-down")
-const btnDownMobile = document.querySelector(".btn-down-mobile")
-const menuAbsolute = document.querySelector(".menu-absolute")
-const menuAbsoluteMobile = document.querySelector(".menu-absolute-mobile")
+const sidebar = document.querySelector(".sidebar"),
+    toggle = document.querySelector(".toggle"),
+    searchBtn = document.querySelector(".search-box"),
+    btnDown = document.querySelector(".btn-down"),
+    btnDownMobile = document.querySelector(".btn-down-mobile"),
+    menuAbsolute = document.querySelector(".menu-absolute"),
+    menuAbsoluteMobile = document.querySelector(".menu-absolute-mobile")
 
 toggle.addEventListener('click', () => {
     sidebar.classList.toggle("close")

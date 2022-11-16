@@ -1,9 +1,9 @@
 import { initializeApp } from "https://www.gstatic.com/firebasejs/9.4.0/firebase-app.js"
-import { getAuth, onAuthStateChanged, sendEmailVerification } from "https://www.gstatic.com/firebasejs/9.4.0/firebase-auth.js"
+import { getAuth, onAuthStateChanged} from "https://www.gstatic.com/firebasejs/9.4.0/firebase-auth.js"
 import { getStorage, ref, getDownloadURL } from "https://www.gstatic.com/firebasejs/9.4.0/firebase-storage.js"
 import { getFirestore, collection, getDocs, collectionGroup, query } from "https://www.gstatic.com/firebasejs/9.4.0/firebase-firestore.js"
 
- 
+
 const firebaseApp = {
     apiKey: "AIzaSyCCEFGTE5Cy7dHWpoEV-L-vbaar-kMbD_c",
     authDomain: "revista-literatus.firebaseapp.com",
@@ -27,9 +27,6 @@ onAuthStateChanged(auth, async (user) => {
     } else {
         console.log("logue, Por favor!");
     }
-    // await sendEmailVerification(user).then(() => {
-    //     console.log('Enviado')
-    // })
 })
 // .
 
@@ -62,71 +59,38 @@ const verificaADM = async ({ uid }) => {
 // .
 
 const buscaDados = async () => {
-    const pessoas = query(collectionGroup(firestore, 'cadastro'))
-    const queryPessoas = await getDocs(pessoas)
-    queryPessoas.forEach(async (user) => {
-        const pessoa = user.data()
-    console.log(pessoa);
-    })
+    // const pessoas = query(collectionGroup(firestore, 'cadastro'))
+    // const queryPessoas = await getDocs(pessoas)
+    // queryPessoas.forEach(async (user) => {
+    //     const pessoa = user.data()
+    //     console.log(pessoa);
+    // })
 
     const arquivos = query(collectionGroup(firestore, 'PDFs'))
     const queryArquivos = await getDocs(arquivos)
-    
-        queryArquivos.forEach(async (doc) => {
-            const pdf = doc.data()
-            console.log(pdf);
-            
-            const storageRef = await ref(storage, `Submissões/${pdf.uid}/${pdf.arquivo}/[object File]`)
-            getDownloadURL(storageRef)
-                .then((url) => {
-                    const users = document.querySelector(".users")
-                    const user = document.createElement("article")
-                    user.classList.add("user")
-                    user.innerHTML = `
-                            <h2><span>Nome: </span> ${pdf.nome} </h2>
-                            <h3><span>E-mail: </span> ${pdf.email}</h3>
-                            <a href="${url}" target="_blank"><span>Arquivo: </span>${pdf.arquivo}</a>
-                        `
-                    users.appendChild(user)
-                })
-                .catch((error) => {
-                    console.log(error)
-                })
-        })
 
+    queryArquivos.forEach(async (doc) => {
+        const pdf = doc.data()
+        console.log(pdf);
 
-    // const query = await getDocs(collection(firestore, "users"));
-    // console.log(query);
-    // query.forEach(async (doc) => {
-    //     const uid = doc.id
-    //     console.log(uid);
+        const storageRef = await ref(storage, `Submissões/${pdf.uid}/${pdf.arquivo}/[object File]`)
+        getDownloadURL(storageRef)
+            .then((url) => {
+                const fragment = new DocumentFragment()
+                const users = document.querySelector(".users")
+                const user = document.createElement("article")
+                user.classList.add("user")
+                user.innerHTML = `
+                    <h2><span>Nome: </span> ${pdf.nome} </h2>
+                    <h3><span>E-mail: </span> ${pdf.email}</h3>
+                    <a href="${url}" target="_blank"><span>Arquivo: </span>${pdf.arquivo}</a>
+                    `
+                fragment.append(user)
+                users.append(fragment)
+            })
+            .catch((error) => {
+                console.log(error)
+            })
+    })
 
-    // const querySnapshot = await getDocs(collection(firestore, "users", uid, "cadastro"))
-    // querySnapshot.forEach((d) => {
-    //     pessoas = d.data()
-    // })
-
-    //     const PDFsRef = await getDocs(collection(firestore, "users", uid, "PDFs"))
-    //     PDFsRef.forEach(async (a) => {
-    //         const pdf = a.data()
-    //         const storageRef = await ref(storage, `Submissões/${uid}/${pdf.arquivo}/[object File]`)
-    //         getDownloadURL(storageRef)
-    //             .then(async (url) => {
-    //                 const users = document.querySelector(".users")
-    //                 const user = document.createElement("article")
-    //                 user.classList.add("user")
-    //                 user.innerHTML = `
-    //                     <h2><span>Nome: </span> ${pdf.nome} </h2>
-    //                     <h3><span>E-mail: </span> ${pdf.email}</h3>
-    //                     <a href="${url}" target="_blank"><span>Arquivo: </span>${pdf.arquivo}</a>
-    //                 `
-    //                 users.appendChild(user)
-    //             })
-    //             .catch((error) => {
-    //                 console.log(error)
-    //             })
-    //     })
-    // })
 }
-
-
