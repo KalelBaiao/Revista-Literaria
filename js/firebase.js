@@ -3,14 +3,15 @@ import { getAuth, onAuthStateChanged} from "https://www.gstatic.com/firebasejs/9
 import { getFirestore, collection, getDocs } from "https://www.gstatic.com/firebasejs/9.4.0/firebase-firestore.js"
 
 const firebaseApp = {
-    apiKey: "AIzaSyCCEFGTE5Cy7dHWpoEV-L-vbaar-kMbD_c",
-    authDomain: "revista-literatus.firebaseapp.com",
-    projectId: "revista-literatus",
-    storageBucket: "revista-literatus.appspot.com",
-    messagingSenderId: "637824781668",
-    appId: "1:637824781668:web:7f4c8126a8a22436303e71",
-    measurementId: "G-FGCTN6KKW0"
-}
+    apiKey: "AIzaSyC0g9wwwj-YRvthczX0Ohi_-SD2ztYD6jA",
+    authDomain: "revista-literatus-72e18.firebaseapp.com",
+    projectId: "revista-literatus-72e18",
+    storageBucket: "revista-literatus-72e18.appspot.com",
+    messagingSenderId: "129653410217",
+    appId: "1:129653410217:web:e40fa18d95337d57b39cb8",
+    measurementId: "G-G0J9HWG6MR"
+};
+
 
 const app = initializeApp(firebaseApp)
 const firestore = getFirestore(app)
