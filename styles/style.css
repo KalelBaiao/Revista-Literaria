@@ -467,6 +467,7 @@ main {
   font-size: 2.5em;
   text-shadow: 1px 2px 4px rgba(0, 0, 0, 0.2);
   font-family: var(--fonte_titulo);
+  text-align: center;
 }
 
 .note {
