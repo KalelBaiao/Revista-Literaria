@@ -59,6 +59,9 @@ main {
     width: 100%;
     border-radius: 4px;
 }
+.publicacao .titulo-publicacao{
+    position: relative;
+}
 
 .publicacao .titulo-publicacao h1 {
     position: relative;
@@ -66,24 +69,23 @@ main {
     font-size: 20px;
     letter-spacing: 1px;
 }
-
-.publicacao .titulo-publicacao h1:before {
-    content: "Romance";
+.publicacao .titulo-publicacao .publicacao-tipo{
     position: absolute;
     top: -45px;
     left: 25px;
-    width: 85px;
+    max-width: 100%;
     background-color: var(--azul05);
     display: flex;
     align-items: center;
-    /* justify-content: center; */
     padding: 2px;
-    padding-left: 10px;
+    padding: 0 16px 0 10px;
     font-weight: 500;
     color: white;
     font-size: 14px;
     border-bottom-right-radius: 100px;
     border-top-right-radius: 8px;
+    font-family: var(--fonte_titulo);
+    letter-spacing: 1px;
 }
 
 .publicacao .resumo-edicao {

@@ -223,7 +223,7 @@ main {
   align-items: center;
   width: 100%;
   /* height: 100%; */
-  height: 80vh;
+  /* height: 80vh; */
   /* min-height: 300px; */
   max-width: 1300px;
   border-radius: 16px;
@@ -237,6 +237,7 @@ main {
   align-items: center;
   height: 100%;
   width: 100%;
+  /* max-width: 50%; */
 }
 
 .text,
@@ -248,7 +249,7 @@ main {
 }
 
 .imagem img {
-  width: 100%;
+  width: 80%;
   background-size: cover;
 }
 
@@ -269,6 +270,7 @@ main {
   flex-direction: column;
   position: relative;
   width: 100%;
+  align-items: center;
 }
 
 .text-titulo h1,
@@ -494,6 +496,7 @@ main {
     max-width: 400px;
   }
 
+
   .text {
     align-items: center;
   }
@@ -502,6 +505,9 @@ main {
 @media (max-width: 600px) {
   .quem-somos-nos#paralax {
     padding: 5vw;
+  }
+  .imagem img {
+    width: 70%;
   }
 }
 
