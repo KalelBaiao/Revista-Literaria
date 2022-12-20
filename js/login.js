@@ -144,7 +144,8 @@ formLogin.addEventListener("submit", async (e) => {
 formContato.addEventListener("submit", async (e) => {
     e.preventDefault()
 
-    btnSubmit.innerText = "*CARREGANDO*"
+    mensagensJs.classList.remove("none")
+    mensagensJs.innerHTML = "*CARREGANDO*"
     const user = auth.currentUser
     console.log(user, user.emailVerified);
     const email = user.email
@@ -157,32 +158,31 @@ formContato.addEventListener("submit", async (e) => {
 
         const storageRef = await ref(storage, `Submissões/${user.uid}/${file.name}/${file}`)
         uploadBytesResumable(storageRef, file)
-            .then(() => {
+            .then( async () => {
+                try {
+                    const docRef = await addDoc(collection(firestore, "users", user.uid, "PDFs"), {
+                        nome: `${nome.value}`,
+                        email: `${email}`,
+                        arquivo: `${file.name}`,
+                        uid: `${user.uid}`
+                    })
+                    console.log("Document written with ID: ", docRef.id)
+                } catch (e) {
+                    mensagensJs.innerHTML = `Falha no envio! Por favor atualize a página e tente novamente. <br> ${e.code}`
+                    mensagensJs.classList.remove("none")
+                    mensagensJs.classList.add("erro")
+                }
+
+                document.querySelector('.file-name').textContent = ""
                 nome.value = ''
                 file.value = ''
-                btnSubmit.innerText = "ENVIADO COM SUCESSO!!!"
+                mensagensJs.innerHTML = "ENVIADO COM SUCESSO!!!"
 
             }).catch((error) => {
                 console.log(error.code)
                 mensagensJs.innerHTML = `Falha no envio! Por favor atualize a página e tente novamente. <br> ${error.code}`
-                mensagensJs.classList.remove("none")
                 mensagensJs.classList.add("erro")
             })
-
-        try {
-            // setDoc(doc(firestore, "users", "new-user"), data)
-            const docRef = await addDoc(collection(firestore, "users", user.uid, "PDFs"), {
-                nome: `${nome.value}`,
-                email: `${email}`,
-                arquivo: `${file.name}`,
-                uid: `${user.uid}`
-            })
-            console.log("Document written with ID: ", docRef.id)
-        } catch (e) {
-            mensagensJs.innerHTML = `Falha no envio! Por favor atualize a página e tente novamente. <br> ${e.code}`
-            mensagensJs.classList.remove("none")
-            mensagensJs.classList.add("erro")
-        }
     } else {
         mensagensJs.innerHTML = `E-mail não autenticado! Por favor verique seu e-mail para autenticação. <br> Obs: Talvez esteja na caixa de Spam.`
         mensagensJs.classList.remove("none")
