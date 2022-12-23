@@ -303,9 +303,10 @@ main {
   bottom: 20px;
   right: 70px;
   background-color: var(--azul05);
-  padding: 6px 25px;
+  padding: 12px 38px;
   border-radius: 20px;
   color: whitesmoke;
+  font-size: 18px;
 }
 
 
