@@ -133,25 +133,27 @@ body {
   /* margin-left: 10vw; */
 }
 
-.icon-lupa a {
+.icon-lupa i {
   display: flex;
   align-items: center;
   justify-content: center;
+  cursor: pointer;
 }
 
-.input-pesquisar {
+.form-pesquisar {
   position: relative;
   margin-left: 5px;
 }
 
-.input-pesquisar input {
+.form-pesquisar input {
   padding: 8px;
   border-radius: 20px;
   border: none;
   width: 200px;
   font-size: 1em;
-  background-color: rgba(255, 255, 255, 0.6);
 }
+
+
 
 
 .menu-edicoes{

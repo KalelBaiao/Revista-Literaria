@@ -39,7 +39,9 @@
         <div class="menu-mobile">
           <li class="search-box">
             <i class="bx bx-search-alt icon"></i>
-            <input type="text" placeholder="Pesquisar" />
+            <form class="form-pesquisar">
+              <input type="text" placeholder="Pesquisar" class="input-pesquisar" autofocus>
+            </form>
           </li>
           <ul class="menu-links">
             <li class="nav-link">
@@ -124,21 +126,18 @@
           </nav>
           <div class="pesquisar">
             <div class="icon-lupa">
-              <a href="#" class="lupa">
-                <!-- <ion-icon name="search-outline" class="ico items"></ion-icon> -->
                 <i class="bx bx-search-alt icon items"></i>
-              </a>
             </div>
-            <div class="input-pesquisar hide">
-              <input type="text" placeholder="Pesquisar" />
-            </div>
+            <form class="form-pesquisar">
+              <input type="text" placeholder="Pesquisar" class="input-pesquisar" autofocus>
+            </form>
           </div>
         </div>
       </header>
     </div>
 
     <main>
-      <h1 class="titulo-edicao">Edição 01</h1>
+      <h1 class="titulo-edicao">Edição 01</h1> 
       <section class="container-edicao">
         <div class="container-publicacoes">
           <article class="publicacao">
@@ -157,7 +156,7 @@
                 Lorem ipsum dolor, sit amet consectetur adipisicing elit.
                 Molestias iure et tempore nisi odio laboriosam, hic non aperiam.
                 Numquam animi laudantium odit aut repellat officia? Explicabo
-                quia dolorem voluptate ea.
+                quia dolorem voluptate ea batata.
               </p>
             </div>
             <div class="btn-vejaMais">
@@ -298,5 +297,6 @@
     <script src="../../js/menu-mobile.js"></script>
     <script src="../../js/dark.js"></script>
     <script src="../../js/firebase.js" type="module"></script>
+    <script src="../../js/pesquisar.js"></script>
   </body>
 </html>
