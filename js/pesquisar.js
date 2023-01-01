@@ -1,6 +1,10 @@
 const inputPesquisar = document.querySelector(".form-pesquisar input")
 const todasPublicacoes = document.querySelectorAll(".container-publicacoes article")
 
+inputPesquisar.addEventListener("keydown", e => {
+    if(e.keyCode === 13) e.preventDefault();  
+})
+
 inputPesquisar.addEventListener("input", e => {
     const inputValue = e.target.value.trim().toLowerCase()
     const pubs = Array.from(todasPublicacoes)
